@@ -1,0 +1,13 @@
+*Diseño lógico
+Usuarios(IDUsuario, Nombre, Apellido1, Apellido2, Username, Password)
+Compras(IDCompra, Fecha, IDUsuario)
+Comidas(IDComida, Fecha, IDUsuario, IDReceta)
+Dietas(IDDieta, Nombre, Descripcion, IDUsuario)
+Recetas(IDReceta, Nombre, Personas, Tiempo, Descripcion)
+Productos(IDProducto, Nombre, Calorias, Descripcion)
+Supermercados(IDSuper, Nombre, Direccion, Telefono, PaginaWeb)
+Disponible(IDProducto, IDSuper)
+Incluye(IDCompra, IDProducto, IDSuper)
+Ingredientes_de(IDReceta, IDProducto, cantidad)
+Componen(IDDieta, IDReceta)
+

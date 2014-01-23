@@ -1,0 +1,568 @@
+#+LaTeX_CLASS: org-university3
+#+OPTIONS: author:nil, toc:nil, title:nil
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usepackage{pifont}
+#+LATEX_HEADER: \usepackage{pstricks, pst-node}
+#+LaTeX_HEADER: \usemintedstyle{perldoc}
+#+LaTeX_HEADER: \usepackage[section]{placeins}
+#+BIND: org-export-latex-title-command ""
+#+LATEX_HEADER: \renewcommand{\contentsname}{ÍNDICE}
+#+LATEX_HEADER: \renewcommand{\chaptername}{C}
+#+LATEX_HEADER: \newcommand{\hmwkLeft}{}
+#+LATEX_HEADER: \newcommand{\hmwkCenter}{\hmwkClass}
+#+LATEX_HEADER: \newcommand{\hmwkRight}{\hmwkTitle}
+#+LATEX_HEADER: \newcommand{\hmwkTitle}{Proyecto DDSI}
+#+LATEX_HEADER: \newcommand{\hmwkTitleExtended}{Sistema de Información para el registro y control de alimentos y dietas}
+#+LATEX_HEADER: \newcommand{\hmwkClass}{Desarrollo De Sistemas de Información}
+#+LATEX_HEADER: \newcommand{\hmwkClassInstructor}{}
+#+LATEX_HEADER: \newcommand{\hmwkAuthorName}{}
+#+LATEX_HEADER: \setmonofont[Scale=0.7]{Monaco}
+#+LATEX_HEADER: \setmonofont[Scale=0.9]{FreeMono}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LaTeX_HEADER: \usepackage{slashbox}
+#+LaTeX_HEADER: \let\itemize\compactitem
+#+LaTeX_HEADER: \let\itemize\compactitem
+#+LaTeX_HEADER: \renewcommand{\bibname}{Referencias}
+#+LaTeX_HEADER: \renewcommand{\figurename}{Figura}
+#+LaTeX_HEADER: \renewcommand{\tablename}{Tabla}
+
+#+begin_LaTeX
+  \title{
+  \begin{center}
+  \vspace*{-2.5cm}
+  \begin{figure}[htb]
+  \begin{center}
+  \includegraphics[width=4cm]{/home/dabuti/University/ugr.jpg}
+  \end{center}
+  \end{figure}
+  \end{center}
+  \Huge{\textbf{Universidad de Granada}}\\
+  \vspace{1cm}
+  \Huge{\textbf{Grado en Ingeniería Informática}}\\
+  \vspace{2cm}
+  \hrule{}
+  \vspace{0.3cm}
+  \textbf{\hmwkClass}\\
+  \vspace{0.3cm}
+  \hrule{}
+  \vspace{2cm}
+  \textbf{\hmwkTitle}\\
+  \vspace{1cm}
+  \textbf{\hmwkTitleExtended}\\
+  \vspace{1.5cm}
+  \textbf{\small{Iris García de Sebastián}}\\
+  \textbf{\small{David Santiago Carrión}}\\
+  \vspace{0.1cm}
+  }
+#+end_LaTeX
+
+\maketitle
+\clearpage
+\tableofcontents
+\clearpage
+
+* Descripción
+  Se pretende implementar un sistema para registrar las comidas que se
+  llevan a cabo a lo largo del día y gestionar los alimentos. Para
+  ello se almacenarán los ingredientes que componen cada receta y su
+  cantidad, además de información nutricional acerca de cada alimento
+  y el lugar y precio donde lo adquirimos.
+
+
+** Registro de alimentos
+   Al introducir los productos adquiridos en un supermercado estos
+   deben agruparse en categorías con un nivel de abstracción
+   superior, considerados como ingredientes. Por ejemplo si el
+   usuario compra una botella de aceite  de oliva 'Jucaso' en el
+   supermercado 'Coviran' y otra botella de aceite de oliva 'Borges'
+   en el supermercado Mercadona, ambos producto deben almacenarse en
+   el sistema bajo el producto 'aceite de oliva'.
+
+   De este modo cada producto que empleemos en la elaboración de
+   nuestra alimentación diaria está descrito por:
+   - *nombre del producto*: una serie de caracteres.
+   - *energía*: un número que indica las kilocalorías que aporta por
+     cada 100 gramos de producto.
+   - *Descripción*: detalles y explicaciones acerca del alimento.
+
+   Los alimentos los podemos adquirir en distintos establecimientos,
+   lo cual nos lleva a guardar información relevante acerca de los
+   mismos como:
+   - *nombre del establecimiento*: una serie de caracteres.
+   - *dirección*: caracteres alfanuméricos que nos ayudan a ubicar la tienda.
+   - *teléfono*: caracteres numéricos.
+   - *web*: dirección web del comercio.
+
+   Tanto los datos de los alimentos como los de los supermercados
+   podrán ser modificados.
+
+
+   Cada vez que se hace una compra se registra información de los
+   productos adquiridos:
+   - *producto*: el producto comprado.
+   - *establecimiento*: donde lo hemos comprado.
+   - *comprador*: el usuario que ha realizado la compra.
+   - *cantidad*: número de unidades adquiridas del producto.
+   - *precio*: número que indica el coste total.
+   - *fecha*: cuando se realizó la adquisición.
+
+
+** Registro de dietas
+   Con todos los ingredientes adquirdos se pueden cocinar recetas. Las
+   recetas se describen y se almacena en el sistema teniendo en cuenta
+   los siguientes puntos:
+   - *nombre*: una serie de caracteres.
+   - *personas*: número de comensales a los que puede abastecer.
+   - *ingredientes*: un conjunto formado por los alimentos necesarios.
+   - *cantidad*: indica la proporción de cada ingrediente.
+   - *tiempo*: minutos que nos puede costar cocinarlo.
+   - *valor nutricional*: número total de calorías que aporta la
+     receta.
+   - *descripción*: documento que indica los pasos a seguir para
+     realizar el plato.
+
+   \vspace{0.2cm}
+   A partir de las diferentes recetas se pueden crear listas
+   personalizadas de las mismas, generando dietas. Las dietas son
+   creadas por los usuarios y les pertenecen a ellos exclusivamente. A
+   diferencia de las recetas estas no se comparten.
+
+   Se guardarán los siguientes puntos:
+   - *nombre de la dieta*: una serie de caracteres.
+   - *recetas*: el conjunto de recetas asociado a la dieta.
+   - *descripción*: información adicional sobre la dieta descrita.
+   - *usuario*: identifica al propietario de la dieta.
+
+   \vspace{0.2cm}
+   Tanto las recetas como las dietas han de poder ser editadas,
+   eliminando y agregando ingredientes o recetas según el caso.
+
+   Dada una dieta en concreto, se listará la información general de la
+   misma junto con sus recetas asociadas, permitiendo al usuario
+   hacerse una idea de los platos que puede preparar.
+
+   Cada vez que alguien realiza una receta se registra quien cocinó la
+   comida, para llevar un control de la despensa:
+   - *Usuario*: quien la ha cocinado.
+   - *Receta*: que receta se ha cocinado.
+   - *Fecha*: cuando se ha realizado la comida.
+
+   \vspace{0.2cm}
+   Los usuarios podrán ver los platos que han realizado y se les
+   ofrecerá la opción de eliminar una comida registrada, para subsanar
+   posibles errores de registro.
+
+
+** Registro de usuarios
+   La base de usuarios estarán registrados, permitiendoles realizar
+   dietas específicas, comidas, compras o recetas. Sus datos serían:
+   - *nombre*: una serie de caracteres.
+   - *primer apellido*: caracteres alfabéticos.
+   - *segundo apellido*:  una serie de caracteres.
+   - *nick*: caracteres por los que quiere ser identificado.
+   - *contraseña*: combinación necesaria para entrar al sistema.
+
+   \vspace{0.2cm}
+   Los usuarios anónimos tienen la opción de darse de alta en el
+   sistema proporcionando los datos previamente expuestos. A partir de
+   entonces podrán acceder a las distintas operaciones que ofrece el
+   sistema, así como editar o eliminar su perfil.
+
+
+
+** Información y estadísticas
+   Los usuarios del sistema tienen acceso a información extraida de
+   las acciones que han ido llevando a cabo con el uso cotidiano del
+   sistema.
+
+   De este modo podrán acceder a una lista con todos los alimentos que
+   tienen disponibles actualmente en la despensa y a una lista de
+   recetas que pueden ser cocinadas en vista de los ingredientes con
+   los que cuenta y las dietas que ha creado.
+
+   Cuando un usuario crea una dieta y asocia los platos que desea,
+   podrá obtener el coste que le supondría adquirir los productos, en
+   los distintos supermercados, para ejecutar todos los platos de
+   dicha dieta.
+
+   Por último, el usuario deberá poder obtener su gasto medio en
+   euros, tanto diario como mensual.
+
+* Análisis de requisitos
+** Requisitos de datos
+*** RD-1: Datos nuevo producto
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Calorías*: un número decimal positivo.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+*** RD2-Datos producto:
+    - *Identificador* de producto: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Calorías*: un número decimal positivo.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+
+*** RD3-Datos producto modificado:
+    - *Identificador* de producto: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres.
+    - *Calorías*: un número decimal positivo.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+
+*** RD4-Identificador comprador:
+    - *Identificador* de usuario: un número entero.
+
+*** RD5-Lista de productos comprados:
+    - *Identificador* de producto: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Calorías*: un número decimal positivo.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+
+*** RD6-Datos nuevo super:
+    - *Nombre*:  una cadena de hasta 20 caracteres no vacía.
+    - *Dirección*:  una cadena de hasta 30 caracteres no vacía.
+    - *Teléfono*: una cadena de 9 caracteres numéricos.
+    - *Página* web: una cadena de hasta 20 caracteres no vacía.
+
+*** RD7-Datos super:
+    - *Identificador* de super: un número entero.
+    - *Nombre*:  una cadena de hasta 20 caracteres no vacía.
+    - *Dirección*:  una cadena de hasta 30 caracteres.
+    - *Teléfono*: una cadena de hasta 9 caracteres numéricos.
+    - *Página web*: una cadena de hasta 20 caracteres.
+
+*** RD8-Datos super modificado:
+    - *Identificador de super*: un número entero.
+    - *Nombre*:  una cadena de hasta 20 caracteres.
+    - *Dirección*:  una cadena de hasta 30 caracteres.
+    - *Teléfono*: una cadena de hasta 9 caracteres numéricos.
+    - *Página web*: una cadena de hasta 20 caracteres.
+
+*** RD9-Datos nueva compra:
+    - *Identificador* de usuario: un número entero.
+*** RD10-Datos compra:
+    - *Identificador de compra*: un número entero.
+    - *Identificador de usuario*: un número entero.
+    - *Fecha*: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el 		tercero por un conjunto de cuatro cifras, separados por barras ('/').
+
+*** RD11-Datos nueva línea de compra:
+    - *Identificador de compra*: un número entero.
+    - *Identificador de producto*: un número entero.
+    - *Identificador de super*: un número entero.
+    - *Cantidad*: un número entero mayor que cero.
+    - *Importe*: un número decimal mayor que cero.
+
+*** RD12-Datos línea de compra:
+    - *Identificador de compra*: un número entero.
+    - *Identificador de producto*: un número entero.
+    - *Identificador de super*: un número entero.
+    - *Cantidad*: un número entero mayor que cero.
+    - *Importe*: un número decimal mayor que cero.
+
+*** RD13-Datos línea de compra a eliminar:
+    - *Identificador de compra*: un número entero.
+    - *Identificador de producto*: un número entero.
+    - *Identificador de super*: un número entero.
+
+*** RD14-Datos nueva dieta:
+    - *Identificador de usuario*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+
+*** RD15-Datos dieta:
+    - *Identificador de dieta*: un número entero.
+    - *Identificador de usuario*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+
+*** RD16-Datos nueva receta de dieta:
+    - *Identificador de dieta*: un número entero.
+    - *Identificador de receta*: un número entero.
+
+*** RD17-Datos receta de dieta:
+    - *Identificador de dieta*: un número entero.
+    - *Identificador de receta*: un número entero.
+
+*** RD18-Datos receta de dieta a eliminar:
+    - *Identificador de dieta*: un número entero.
+    - *Identificador de receta*: un número entero.
+
+*** RD19-Datos nueva receta:
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Personas*: un número entero.
+    - *Tiempo*: un número entero.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+
+*** RD20-Datos receta:
+    - *Identificador de receta*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Personas*: un número entero mayor que cero.
+    - *Tiempo*: un número entero mayor que cero.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+
+*** RD21-Datos nuevo producto de receta:
+    - *Identificador de producto*: un número entero.
+    - *Identificador de receta*: un número entero.
+    - *Cantidad*: un número entero.
+
+*** RD22-Datos producto de receta:
+    - *Identificador de producto*: un número entero.
+    - *Identificador de receta*: un número entero.
+    - *Cantidad*: un número entero.
+
+*** RD23-Datos producto de receta a eliminar:
+    - Identificador de producto: un número entero.
+    - Identificador de receta: un número entero.
+
+*** RD24-Datos receta modificada:
+    - Identificador de receta: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres.
+    - Personas: un número entero.
+    - Tiempo: un número entero.
+    - Descripción: una cadena de hasta 200 caracteres.
+
+*** RD25-Datos nuevo usuario:
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Primer apellido*: una cadena de hasta 20 caracteres.
+    - *Segundo apellido*: una cadena de hasta 20 caracteres.
+    - *Nombre de usuario*: una cadena de hasta 20 caracteres.
+    - *Contraseña*: una cadena alfanumérica de hasta 20 elementos.
+
+*** RD26-Datos usuario:
+    - Identificador de usuario: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres no vacía.
+    - Primer apellido: una cadena de hasta 20 caracteres.
+    - Segundo apellido: una cadena de hasta 20 caracteres.
+    - Nombre de usuario: una cadena de hasta 20 caracteres.
+    - Contraseña: una cadena alfanumérica de hasta 20 elementos.
+
+*** RD27-Datos usuario modificado:
+    - Identificador de usuario: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres no vacía.
+    - Primer apellido: una cadena de hasta 20 caracteres.
+    - Segundo apellido: una cadena de hasta 20 caracteres.
+    - Contraseña: una cadena alfanumérica de hasta 20 elementos.
+*** RD28-Datos usuario a eliminar:
+    - Identificador de usuario: un número entero.
+
+*** RD29-Datos nueva comida:
+    - Identificador de usuario: un número entero.
+    - Identificador de receta: un número entero.
+    - Fecha: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el 		tercero por un conjunto de cuatro cifras, separados por barras ('/').
+
+*** RD30-Datos comida:
+    - Identificador de usuario: un número entero.
+    - Identificador de receta: un número entero.
+    - Fecha: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el 		tercero por un conjunto de cuatro cifras, separados por barras ('/').
+
+*** RD31-Identificador propietario de stock:
+    - Identificador de usuario: un número entero.
+
+*** RD32-Lista de stock:
+    - Identificador de producto: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres no vacía.
+    - Calorías: un número decimal positivo.
+    - Descripción: una cadena de hasta 200 caracteres.
+    - Cantidad: un número entero mayor que cero.
+
+*** RD33-Identificador usuario para gasto diario:
+    - Identificador de usuario: un número entero.
+
+*** RD34-Valor de gasto diario:
+    - Gasto: un número decimal.
+
+*** RD35-Identificador usuario para gasto mensual:
+    - Identificador de usuario: un número entero.
+
+*** RD36-Valor de gasto mensual:
+    - Gasto: un número decimal.
+
+*** RD37-Usuario que consulta recetas disponibles:
+    - Identificador de usuario: un número entero.
+
+*** RD38-Lista recetas disponibles:
+    - Identificador de receta: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres no vacía.
+    - Personas: un número entero mayor que cero.
+    - Tiempo: un número entero mayor que cero.
+    - Descripción: una cadena de hasta 200 caracteres.
+
+*** RD39-Identificador de dieta a consultar:
+    - Identificador de dieta: un número entero.
+
+*** RD40-Coste por super:
+    - Identificador de super: un número entero.
+    - Nombre:  una cadena de hasta 20 caracteres no vacía.
+    - Dirección:  una cadena de hasta 30 caracteres.
+    - Teléfono: una cadena de hasta 9 caracteres numéricos.
+    - Página web: una cadena de hasta 20 caracteres.
+    - Gasto: un número decimal.
+
+*** RD41-Datos de identificación:
+    - Nombre: una cadena de hasta 20 caracteres no vacía.
+    - Contraseña: una cadena alfanumérica de hasta 20 elementos no vacía.
+
+*** RD42-Identificador creador de dieta completa:
+    - Identificador de usuario: un número entero.
+
+*** RD43-Datos dieta completa:
+    - Identificador de dieta: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres no vacía.
+    - Descripción: una cadena de hasta 200 caracteres.
+
+*** RD44-Lista de recetas de dieta:
+    - Identificador de receta: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres.
+    - Personas: un número entero.
+    - Tiempo: un número entero.
+    - Descripción: una cadena de hasta 200 caracteres.
+
+*** RD45-Identificador creador de dietas:
+    - Identificador de usuario: un número entero.
+
+*** RD46-Lista de dietas:
+    - Identificador de dieta: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres no vacía.
+    - Descripción: una cadena de hasta 200 caracteres.
+
+*** RD47-Identificador consultor de recetas:
+    - Identificador de usuario: un número entero.
+
+*** RD48-Lista de recetas:
+    - Identificador de receta: un número entero.
+    - Nombre: una cadena de hasta 20 caracteres.
+    - Personas: un número entero.
+    - Tiempo: un número entero.
+    - Descripción: una cadena de hasta 200 caracteres.
+
+*** RD49-Identificador usuario propio:
+    - Identificador de usuario: un número entero.
+
+*** RD50-Datos usuario propio:
+    - Nombre: una cadena de hasta 20 caracteres.
+    - Primer apellido: una cadena de hasta 20 caracteres.
+    - Segundo apellido: una cadena de hasta 20 caracteres.
+    - Nombre de usuario: una cadena de hasta 20 caracteres.
+    - Contraseña: una cadena alfanumérica de hasta 20 elementos.
+
+*** RD51-Identificador cocinero:
+    - Identificador de usuario: un número entero.
+
+*** RD52-Lista de comidas:
+    - Identificador de usuario: un número entero.
+    - Identificador de receta: un número entero.
+    - Fecha: tres conjuntos de enteros formados los dos primeros por
+      conjuntos de dos cifras y el tercero por un conjunto de cuatro
+      cifras, separados por barras ('/').
+
+*** RD53-Datos cojmida a eliminar:
+    - *Identificador de usuario*: un número entero.
+    - *Identificador de receta*: un número entero.
+    - *Fecha*: tres conjuntos de enteros formados los dos primeros por
+      conjuntos de dos cifras y el tercero por un conjunto de cuatro
+      cifras, separados por barras ('/').
+** Requisitos funcionales
+** Restricciones semánticas
+
+* Esquema caja negra
+* Refinamiento 0
+** DFD 0 (Esquema Armazón)
+** Esquema externo 0
+** Entidad Relación 0
+
+* Refinamiento 1
+** DFD 1
+** Esquema externo 1
+** Entidad Relación 1
+
+* Refinamiento 2
+** DFD 2 (Esquema Armazón)
+** Esquema externo 2
+** Entidad Relación 2
+** Entidad Relación final (atributos)
+
+* Esquemas de Operación y Navegación
+** Proceso: Gestión Compras
+*** Lista de operaciones:
+    1. Listar los productos comprados por un usuario
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/ope01.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/nave01.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+    2. Insertar una nueva comprar a partir del IDUsuario del usuario.
+
+    3. Insertar una nueva línea de compra a partir del IDCompra IDProducto
+       IDSuper, cantidad y precio.
+
+    4. Eliminar una línea de compra a partir del IDCompra, IDProducto
+       e IDSuper.
+
+** Proceso: Gestión Productos
+*** Lista de operaciones
+    1. Insertar un producto a partir del nombre, descripción y
+       calorías.
+    2. Modificar un producto a partir del IDProducto, nombre,
+       descripción y calorías.
+
+** Proceso: Gestión Supermercados
+*** Lista de operaciones
+    1. Insertar un supermercado a partir del nombre, dirección,
+       teléfono y página web.
+    2. Modificar un supermercado a partir del IDSuper, nombre,
+       dirección, teléfono y página web.
+
+** Proceso: Gestión Recetas
+*** Lista de operaciones
+    1. Insertar una receta a partir del nombre, personas, tiempo y
+       descripción.
+    2. Modificar una receta a partir del IDReceta, nombre, personas,
+       tiempo y descripción.
+    3. Asociar un producto a partir de su IDProducto a una receta a
+       partir de su IDReceta y una cantidad.
+    4. Eliminar asociación de un producto a partir de su IDProducto de
+       una receta identificada por IDReceta.
+
+** Proceso: Gestión Dietas
+*** Lista de operaciones
+    1. Insertar una nueva dieta a partir del IDUsuario, nombre y
+       descripción.
+    2. Asociar una receta a partir de su IDReceta a una dieta
+       identificada por su IDDieta.
+    3. Eliminar asociación de una receta a partir de su IDReceta de
+       una dieta identificada por IDDieta.
+    4. Listar nombre, personas, descripción, tiempo todas las recetas asociadas a una dieta a partir de su IDDieta
+
+
+** Proceso: Gestión Usuarios
+*** Lista de operaciones
+   1. Modificar un nuevo usuario a partir de su nombre, apellido1,
+       apellido2, username y password.
+
+*** Lista de operaciones:
+   Descripción...
+   - Esquema operación:
+     includegraphics
+   - Esquema navegación:
+     includegraphics
+
+* Interface
+
+* Manual de usuario
