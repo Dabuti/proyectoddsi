@@ -1,5 +1,5 @@
 CREATE TABLE Usuario(
-       IDUsuario int NOT NULL AUTO_INCREMENT,
+       IDUsuario int NOT NULL IDENTITY,
        Nombre char(20) NOT NULL,
        Apellido1 char(20) NOT NULL,
        Apellido2 char(20),
@@ -9,7 +9,7 @@ CREATE TABLE Usuario(
 );
 
 CREATE TABLE Compra(
-       IDCompra int NOT NULL AUTO_INCREMENT,
+       IDCompra int NOT NULL IDENTITY,
        Fecha DATE DEFAULT (sysdate),
        IDUsuario int NOT NULL,
        PRIMARY KEY(IDCompra),
@@ -17,7 +17,7 @@ CREATE TABLE Compra(
 );
 
 CREATE TABLE Receta(
-       IDReceta int NOT NULL AUTO_INCREMENT,
+       IDReceta int NOT NULL IDENTITY,
        Nombre char(20) NOT NULL,
        Personas smallint NOT NULL,
        Tiempo smallint NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE Receta(
 );
 
 CREATE TABLE Comida(
-       IDComida int NOT NULL AUTO_INCREMENT,
+       IDComida int NOT NULL IDENTITY,
        Fecha DATE DEFAULT(sysdate),
        IDUsuario int NOT NULL,
        IDReceta int NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE Comida(
 );
 
 CREATE TABLE Dieta(
-       IDDieta int NOT NULL AUTO_INCREMENT,
+       IDDieta int NOT NULL IDENTITY,
        Nombre char(20) NOT NULL,
        Descripcion char(200),
        IDUsuario int NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Dieta(
 );
 
 CREATE TABLE Producto(
-       IDProducto int NOT NULL AUTO_INCREMENT,
+       IDProducto int NOT NULL IDENTITY,
        Nombre char(20) NOT NULL,
        Calorias smallint,
        Descripcion char(200),
@@ -53,7 +53,7 @@ CREATE TABLE Producto(
 );
 
 CREATE TABLE Super(
-       IDSuper int NOT NULL AUTO_INCREMENT,
+       IDSuper int NOT NULL IDENTITY,
        Nombre char(20) NOT NULL,
        Direccion varchar(30),
        Telefono number(9),
