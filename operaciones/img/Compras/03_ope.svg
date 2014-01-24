@@ -24,7 +24,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
      inkscape:cx="1095.4263"
-     inkscape:cy="2185.1783"
+     inkscape:cy="2104.3661"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -689,89 +689,6 @@
          x="952.97034"
          id="tspan8232-0"
          sodipodi:role="line">está</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:3.7701714;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect8545-3-90"
-       width="112.9882"
-       height="113.1115"
-       x="-2093.782"
-       y="533.64496"
-       transform="matrix(-0.86930638,0.49427363,-0.86930638,-0.49427363,0,0)"
-       ry="0" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text8230-4"
-       y="-1301.8274"
-       x="1221.1786"
-       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:20px;font-weight:bold;-inkscape-font-specification:Sans Bold"
-         y="-1301.8274"
-         x="1221.1786"
-         id="tspan8232-9"
-         sodipodi:role="line">realiza</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:4.03811979;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 1088.032,-1297.7872 71.6828,-0.9722"
-       id="path4966-5-8"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:4.06483221;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 1353.7358,-1297.6991 74.6865,-0.9454"
-       id="path4966-5-8-1"
-       inkscape:connector-curvature="0" />
-    <rect
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:3.06900001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect2985-4"
-       width="208.50218"
-       height="75.645058"
-       x="1429.8306"
-       y="-1338.0958" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text8230-0-2-0"
-       y="-1231.4183"
-       x="1550.0217"
-       style="font-size:27.6959877px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"
-       transform="scale(0.95055588,1.052016)"><tspan
-         style="font-size:27.6959877px;font-weight:bold;-inkscape-font-specification:Sans Bold"
-         y="-1231.4183"
-         x="1550.0217"
-         id="tspan8232-0-5-9"
-         sodipodi:role="line">Usuario</tspan></text>
-    <g
-       transform="translate(1318.4074,245.39596)"
-       id="g4104-6-0">
-      <path
-         transform="translate(206.59344,-1910.3867)"
-         d="m 188.89853,338.37222 c 0,4.46314 -4.07034,8.08122 -9.09137,8.08122 -5.02103,0 -9.09137,-3.61808 -9.09137,-8.08122 0,-4.46313 4.07034,-8.08122 9.09137,-8.08122 5.02103,0 9.09137,3.61809 9.09137,8.08122 z"
-         sodipodi:ry="8.0812206"
-         sodipodi:rx="9.0913725"
-         sodipodi:cy="338.37222"
-         sodipodi:cx="179.80716"
-         id="path3264-0-2-8-5"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3.06900001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:type="arc" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3266-2-9-1-4"
-         d="m 319.73054,-1572.0145 c 35.35533,0 56.56854,0 56.56854,0"
-         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-size:50.2806015px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1817.8611"
-       y="-1250.9033"
-       id="text8513-4-6-8"
-       sodipodi:linespacing="125%"
-       transform="scale(0.947755,1.055125)"><tspan
-         sodipodi:role="line"
-         x="1817.8611"
-         y="-1250.9033"
-         id="tspan8517-1-9-1"
-         style="font-size:20.11223984px">IDUsuario</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2.82628703;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect8547-6"

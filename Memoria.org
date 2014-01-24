@@ -548,6 +548,8 @@
        cantidad.
     4. Eliminar asociación de un producto a partir de su IDProducto de
        una receta identificada por IDReceta.
+    5. Listar nombre, calorías, cantidad y descripción de los productos que
+       componen una receta a partir de su IDReceta.
 
 ** Proceso: Gestión Dietas
 *** Lista de operaciones
@@ -559,8 +561,8 @@
        una dieta identificada por IDDieta.
     4. Listar nombre y descripción de las dietas de un usuario a
        partir de su IDUsuario.
-    5. Listar nombre, calorías, cantidad y descripción de los productos que
-       componen una dieta a partir de su IDDieta.
+    5. Listar nombre, personas, tiempo y descripción de cada una de
+       las recetas asociadas a una dieta a partir de su IDDieta.
 
 ** Proceso: Gestión Estadísticas
 *** Lista de operaciones

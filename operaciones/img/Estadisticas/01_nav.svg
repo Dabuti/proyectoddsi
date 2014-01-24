@@ -24,7 +24,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
      inkscape:cx="1063.6102"
-     inkscape:cy="2003.4358"
+     inkscape:cy="2043.8419"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1390,5 +1390,37 @@
            id="tspan8571-64-0"
            sodipodi:role="line">R</tspan></text>
     </g>
+    <g
+       transform="translate(739.54197,236.46549)"
+       id="g10193-0">
+      <path
+         transform="matrix(-1,0,0,-1,611.85008,-975.12442)"
+         d="m 188.89853,338.37222 c 0,4.46314 -4.07034,8.08122 -9.09137,8.08122 -5.02103,0 -9.09137,-3.61808 -9.09137,-8.08122 0,-4.46313 4.07034,-8.08122 9.09137,-8.08122 5.02103,0 9.09137,3.61809 9.09137,8.08122 z"
+         sodipodi:ry="8.0812206"
+         sodipodi:rx="9.0913725"
+         sodipodi:cy="338.37222"
+         sodipodi:cx="179.80716"
+         id="path3264-6-4-0-0-6-2"
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:3.06900001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3266-6-6-9-1-3-7"
+         d="m 441.64655,-1315.4267 c 31.53287,-11.477 50.45266,-18.3633 50.45266,-18.3633"
+         style="fill:none;stroke:#000000;stroke-width:2.92269373;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:50.2806015px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1127.6405"
+       y="-1013.2719"
+       id="text8513-4-4-3-0"
+       sodipodi:linespacing="125%"
+       transform="scale(0.947755,1.055125)"><tspan
+         sodipodi:role="line"
+         x="1127.6405"
+         y="-1013.2719"
+         id="tspan8517-1-6-69-5"
+         style="font-size:20.11223984px">Cantidad</tspan></text>
   </g>
 </svg>
