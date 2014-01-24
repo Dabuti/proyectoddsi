@@ -482,7 +482,9 @@
 * Esquemas de Operación y Navegación
 ** Proceso: Gestión Compras
 *** Lista de operaciones:
-    1. Listar los productos comprados por un usuario
+    1. Listar el nombre, calorías y descripción de los productos y
+       nombre del supermercado comprados por un usuario a partir de su
+       IDUsuario.
        - Esquema de operación:
          #+begin_LaTeX
          \begin{figure}[!htp]
@@ -508,6 +510,8 @@
          \end{figure}
        #+end_LaTeX
     2. Insertar una nueva comprar a partir del IDUsuario del usuario.
+       NOTA: Fecha automática en la inserción. (Ningún dato de
+       entrada) (IDUsuario se pilla de la sesión).
 
     3. Insertar una nueva línea de compra a partir del IDCompra IDProducto
        IDSuper, cantidad y precio.
@@ -517,6 +521,8 @@
 
 ** Proceso: Gestión Productos
 *** Lista de operaciones
+    Explicar estas operaciones las realiza el sistema, porque se
+    puebla la base de datos, pero las operaciones existen.
     1. Insertar un producto a partir del nombre, descripción y
        calorías.
     2. Modificar un producto a partir del IDProducto, nombre,
@@ -524,19 +530,22 @@
 
 ** Proceso: Gestión Supermercados
 *** Lista de operaciones
+    Explicar estas operaciones las realiza el sistema, porque se
+    puebla la base de datos, pero las operaciones existen.
     1. Insertar un supermercado a partir del nombre, dirección,
        teléfono y página web.
-    2. Modificar un supermercado a partir del IDSuper, nombre,
-       dirección, teléfono y página web.
+    2. Modificar nombre, dirección, teléfono y página web de un
+       supermercado a partir del IDSuper.
 
 ** Proceso: Gestión Recetas
 *** Lista de operaciones
     1. Insertar una receta a partir del nombre, personas, tiempo y
        descripción.
-    2. Modificar una receta a partir del IDReceta, nombre, personas,
-       tiempo y descripción.
-    3. Asociar un producto a partir de su IDProducto a una receta a
-       partir de su IDReceta y una cantidad.
+    2. Modificar nombre, personas, tiempo y descripción de una receta
+       a partir del IDReceta.
+    3. Insertar una asociación de un producto a partir de su
+       IDProducto y una receta a partir de su IDReceta con una
+       cantidad.
     4. Eliminar asociación de un producto a partir de su IDProducto de
        una receta identificada por IDReceta.
 
@@ -544,25 +553,52 @@
 *** Lista de operaciones
     1. Insertar una nueva dieta a partir del IDUsuario, nombre y
        descripción.
-    2. Asociar una receta a partir de su IDReceta a una dieta
-       identificada por su IDDieta.
+    2. Insertar una asociación de una receta a partir de su IDReceta a
+       una dieta identificada por su IDDieta.
     3. Eliminar asociación de una receta a partir de su IDReceta de
        una dieta identificada por IDDieta.
-    4. Listar nombre, personas, descripción, tiempo todas las recetas asociadas a una dieta a partir de su IDDieta
+    4. Listar nombre y descripción de las dietas de un usuario a
+       partir de su IDUsuario.
+    5. Listar nombre, calorías, cantidad y descripción de los productos que
+       componen una dieta a partir de su IDDieta.
 
+** Proceso: Gestión Estadísticas
+*** Lista de operaciones
+    1. Mostrar el gasto medio diario en las comidas realizadas por un
+       usuario a partir de su IDUsuario.
+    2. Mostrar el gasto mensual actual de un usuario a partir de su
+       IDUsuario.
+       NOTA: Modificar RD y RF (queremos suma total de lo gastado en
+       comida desde principio de mes).
+    3. Mostrar el nombre, calorías, descripción y cantidad de los
+       productos existentes en el stock de un usuario a partir de su
+       IDUsuario.
+    4. Mostar nombre, calorías y descripción de las recetas para las
+       que dispone los ingredientes necesarios un usuario a partir de
+       su IDUsuario.
+       NOTA: Haciendo uso del stock.
+    5. Mostrar el nombre de los supermercados y precio total de lo que
+       costaría comprar los ingredientes necesarios para elaborar las
+       recetas que componen una dieta a partir de su IDDieta.
+
+** Proceso: Gestión Comidas
+*** Lista de operaciones
+    1. Insertar el registro de una nueva comida por un usuario a
+       partir de su IDUsuario.
+       NOTA: se inserta campo fecha con valor: now().
 
 ** Proceso: Gestión Usuarios
 *** Lista de operaciones
-   1. Modificar un nuevo usuario a partir de su nombre, apellido1,
-       apellido2, username y password.
-
-*** Lista de operaciones:
-   Descripción...
-   - Esquema operación:
-     includegraphics
-   - Esquema navegación:
-     includegraphics
-
+   1. Insertar un usuario a partir de su nombre, apellido1, apellido2,
+      username y password.
+   2. Eliminar un usuario a partir de su IDUsuario.
+      NOTA: Al loro hay que eliminar todo lo relacionado con ese usuario.
+   3. Modificar el nombre, apellido1, apellido2, username y password
+      de un usuario a partir de su IDUsuario.
 * Interface
 
 * Manual de usuario
+
+
+
+* LOS PRODUCTOS y SUPERMERCADOS SON POBLADOS POR EL SISTEMA.
