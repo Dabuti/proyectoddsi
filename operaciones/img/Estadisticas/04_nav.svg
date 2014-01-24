@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="03_ope.svg"
+   sodipodi:docname="04_nav.svg"
    inkscape:version="0.48.4 r9939"
    version="1.1"
    id="svg2"
@@ -28,10 +28,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1080"
+     inkscape:window-width="1918"
+     inkscape:window-height="1056"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="22"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true" />
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1481,5 +1481,37 @@
            id="tspan8571-0"
            sodipodi:role="line">R</tspan></text>
     </g>
+    <g
+       id="g4134-6-6-9"
+       transform="matrix(-1,0,0,-1,1448.2552,-2757.1811)">
+      <path
+         transform="translate(117.67971,-1987.1583)"
+         d="m 188.89853,338.37222 c 0,4.46314 -4.07034,8.08122 -9.09137,8.08122 -5.02103,0 -9.09137,-3.61808 -9.09137,-8.08122 0,-4.46313 4.07034,-8.08122 9.09137,-8.08122 5.02103,0 9.09137,3.61809 9.09137,8.08122 z"
+         sodipodi:ry="8.0812206"
+         sodipodi:rx="9.0913725"
+         sodipodi:cy="338.37222"
+         sodipodi:cx="179.80716"
+         id="path3264-6-6-7-8"
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:3.06900001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3266-6-9-9-7"
+         d="m 232.85741,-1648.7861 c 35.35533,0 56.56854,0 56.56854,0"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:50.2806015px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1108.7617"
+       y="-1043.6659"
+       id="text8513-4-4-3-5-4"
+       sodipodi:linespacing="125%"
+       transform="scale(0.947755,1.055125)"><tspan
+         sodipodi:role="line"
+         x="1108.7617"
+         y="-1043.6659"
+         id="tspan8517-1-6-69-0-2"
+         style="font-size:20.11223984px">Cantidad</tspan></text>
   </g>
 </svg>
