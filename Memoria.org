@@ -1056,21 +1056,31 @@
 ** Proceso: Gestión Estadísticas
 *** Lista de operaciones
     1. Mostrar el gasto medio diario en las comidas realizadas por un
-       usuario a partir de su IDUsuario.
+       usuario a partir de su IDUsuario. Para ello divide el resultado de las siguientes operaciones:
+       1.1 Calcular el gasto total de todas las compras de un usuario dado por su IDUsuario.
+       1.2 Calcular el número de comidas llevadas a cabo por un usuario dado por su IDUsuario.
+
     2. Mostrar el gasto mensual actual de un usuario a partir de su
-       IDUsuario.
-       NOTA: Modificar RD y RF (queremos suma total de lo gastado en
-       comida desde principio de mes).
+       IDUsuario. Para ello divide el resultado de las siguientes operaciones:
+       2.1 Calcular el gastos desde principio de mes de un usuario dado por su IDUsuario.
+       2.2 Calcular el número de comidas realizadas por un usuario dado por su IDUSuario desde principio de mes.
+       NOTA: Modificar RD y RF
+
     3. Mostrar el nombre, calorías, descripción y cantidad de los
        productos existentes en el stock de un usuario a partir de su
-       IDUsuario.
+       IDUsuario. Para ello resta los resultados de las siguientes operaciones para cada IDProducto:
+       3.1 Calcular la cantidad total comprada de un producto dado su IDProducto  por un usuario dado su IDUsuario.
+       3.2 Calcular la cantidad total gastada en comidas de un producto a partir de su IDProducto, por un usuario a partir de su IDUSuario
+
     4. Mostar nombre, calorías y descripción de las recetas para las
        que dispone los ingredientes necesarios un usuario a partir de
-       su IDUsuario.
+       su IDUsuario. Para ello resta al resultado de la operación 3 (la anterior) el resultado de la operación 5 de gestión de recetas, que lista sus productos.
        NOTA: Haciendo uso del stock.
+
     5. Mostrar el nombre de los supermercados y precio total de lo que
        costaría comprar los ingredientes necesarios para elaborar las
-       recetas que componen una dieta a partir de su IDDieta.
+       recetas que componen una dieta a partir de su IDDieta. Para ello lista los productos de cada receta de la dieta (operaciones 5 de Recetas y Dietas respectivamente) y los múltiplica por el resultado de la siguiente función:
+       5.1 Listar el precio medio de un producto dado por IDProducto en los supermercados.
 
 ** Proceso: Gestión Comidas
 *** Lista de operaciones
