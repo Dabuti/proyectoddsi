@@ -1,4 +1,4 @@
-% Created 2014-01-26 dom 13:51
+% Created 2014-01-26 dom 15:35
 \documentclass[a4paper,12pt]{report}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -194,7 +194,7 @@ productos adquiridos:
 \item \textbf{fecha}: cuando se realizó la adquisición.
 \end{itemize}
 
-$\backslash$\newpage
+\newpage
 
 \section{Registro de dietas}
 \label{sec-1-2}
@@ -248,7 +248,7 @@ Los usuarios podrán ver los platos que han realizado y se les
 ofrecerá la opción de eliminar una comida registrada, para subsanar
 posibles errores de registro.
 
-$\backslash$\newpage
+\newpage
 
 \section{Registro de usuarios}
 \label{sec-1-3}
@@ -672,101 +672,101 @@ cifras, separados por barras ('/').
 \end{itemize}
 \section{Requisitos funcionales}
 \label{sec-2-2}
-\subsection{\textbf{RF1-Alta de un producto}: registra un producto en el sistema a partir de los datos de un producto proporcionados por un usuario.}
+\subsection{\textbf{RF1-Alta de un producto}}
 \label{sec-2-2-1}
-
-\subsection{\textbf{RF2-Modificar un producto}: modifica los datos de un producto almacenado en el sistema por los proporcionados por el usuario.}
+Registra un producto en el sistema a partir de los datos de un producto proporcionados por un usuario.
+\subsection{\textbf{RF2-Modificar un producto}}
 \label{sec-2-2-2}
-
-\subsection{\textbf{RF3-Listar productos comprados}: devuelve los productos comprados por el usuario cuyo código se ha pasado como parámetro.}
+Modifica los datos de un producto almacenado en el sistema por los proporcionados por el usuario.
+\subsection{\textbf{RF3-Listar productos comprados}}
 \label{sec-2-2-3}
-
-\subsection{\textbf{RF4-Registrar un super}: añade un nuevo supermercado al sistema con la información facilitada por el usuario.}
+Devuelve los productos comprados por el usuario cuyo código se ha pasado como parámetro.
+\subsection{\textbf{RF4-Registrar un super}}
 \label{sec-2-2-4}
-
-\subsection{\textbf{RF5-Modificar un super}: altera la información de un supermercado registrado en el sistema por los nuevos datos suministrados.}
+Añade un nuevo supermercado al sistema con la información facilitada por el usuario.
+\subsection{\textbf{RF5-Modificar un super}}
 \label{sec-2-2-5}
-
-\subsection{\textbf{RF6-Nueva compra}: almacena una compra nueva en el sistema con la fecha actual y el identificador del usuario que la ha iniciado.}
+Altera la información de un supermercado registrado en el sistema por los nuevos datos suministrados.
+\subsection{\textbf{RF6-Nueva compra}}
 \label{sec-2-2-6}
-
-\subsection{\textbf{RF7-Añadir producto a compra}: incluye una cantidad determinada de artículos identificados por los datos proporcionados por el usuario y su importe en euros.}
+Almacena una compra nueva en el sistema con la fecha actual y el identificador del usuario que la ha iniciado.
+\subsection{\textbf{RF7-Añadir producto a compra}}
 \label{sec-2-2-7}
-
-\subsection{\textbf{RF8-Eliminar producto de compra}: borra de una compra el producto adquirido en un supermercado  por el usuario.}
+Incluye una cantidad determinada de artículos identificados por los datos proporcionados por el usuario y su importe en euros.
+\subsection{\textbf{RF8-Eliminar producto de compra}}
 \label{sec-2-2-8}
-
-\subsection{\textbf{RF9-Añadir nueva dieta}: agrega una nueva dieta a las almacenadas en el sistema a partir de los datos dados por el usuario.}
+Borra de una compra el producto adquirido en un supermercado  por el usuario.
+\subsection{\textbf{RF9-Añadir nueva dieta}}
 \label{sec-2-2-9}
-
-\subsection{\textbf{RF10-Añadir receta a dieta}: incluye una receta en una dieta, ambas identificadas por los datos proporcionador por el usuario.}
+Agrega una nueva dieta a las almacenadas en el sistema a partir de los datos dados por el usuario.
+\subsection{\textbf{RF10-Añadir receta a dieta}}
 \label{sec-2-2-10}
-
-\subsection{\textbf{RF11-Eliminar receta de dieta}: borra una receta de una dieta determinada, según los datos proporcionados por el usuario.}
+Incluye una receta en una dieta, ambas identificadas por los datos proporcionador por el usuario.
+\subsection{\textbf{RF11-Eliminar receta de dieta}}
 \label{sec-2-2-11}
-
-\subsection{\textbf{RF12-Añadir nueva receta}: registra una receta en el sistema partiendo de los datos de una receta proporcionados por un usuario.}
+Borra una receta de una dieta determinada, según los datos proporcionados por el usuario.
+\subsection{\textbf{RF12-Añadir nueva receta}}
 \label{sec-2-2-12}
-
-\subsection{\textbf{RF13-Añadir producto a receta}: registra un ingrediente, junto con su cantidad, en una receta almacenada en el sistema, a partir de los datos introducidos por el usuario.}
+Registra una receta en el sistema partiendo de los datos de una receta proporcionados por un usuario.
+\subsection{\textbf{RF13-Añadir producto a receta}}
 \label{sec-2-2-13}
-
-\subsection{\textbf{RF14-Eliminar producto de receta}: elimina el producto identificado por el usuario de la receta proporcionada por el mismo.}
+Registra un ingrediente, junto con su cantidad, en una receta almacenada en el sistema, a partir de los datos introducidos por el usuario.
+\subsection{\textbf{RF14-Eliminar producto de receta}}
 \label{sec-2-2-14}
-
-\subsection{\textbf{RF15-Modificar una receta}: altera la información de una receta registrada en el sistema por los nuevos datos que el usuario proporcione.}
+Elimina el producto identificado por el usuario de la receta proporcionada por el mismo.
+\subsection{\textbf{RF15-Modificar una receta}}
 \label{sec-2-2-15}
-
-\subsection{\textbf{RF16-Dar de alta un usuario}: registra un usuario nuevo en el sistema a partir de la información proporcionada por un usuario anónimo.}
+Altera la información de una receta registrada en el sistema por los nuevos datos que el usuario proporcione.
+\subsection{\textbf{RF16-Dar de alta un usuario}}
 \label{sec-2-2-16}
-
-\subsection{\textbf{RF17-Modificar un usuario}: modifica los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.}
+Registra un usuario nuevo en el sistema a partir de la información proporcionada por un usuario anónimo.
+\subsection{\textbf{RF17-Modificar un usuario}}
 \label{sec-2-2-17}
-
-\subsection{\textbf{RF18-Elimina un usuario}: suprime los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.}
+Modifica los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
+\subsection{\textbf{RF18-Elimina un usuario}}
 \label{sec-2-2-18}
-
-\subsection{\textbf{RF19-Hacer comida}: registra la elaboración de una receta llevada a cabo por un usuario del sistema en la fecha actual.}
+Suprime los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
+\subsection{\textbf{RF19-Hacer comida}}
 \label{sec-2-2-19}
-
-\subsection{\textbf{RF20-Listar stock}: muestra la cantidad de productos disponibles para un usuario.}
+Registra la elaboración de una receta llevada a cabo por un usuario del sistema en la fecha actual.
+\subsection{\textbf{RF20-Listar stock}}
 \label{sec-2-2-20}
-
-\subsection{\textbf{RF21-Calcular gasto diario}: devuelve el promedio de euros que gasta el usuario cada día en comidas.}
+Muestra la cantidad de productos disponibles para un usuario.
+\subsection{\textbf{RF21-Calcular gasto diario}}
 \label{sec-2-2-21}
-
-\subsection{\textbf{RF22-Calcular gasto mensual}: retorna la cantidad de euros que el usuario ha gastado este mes entre las comidas realizadas.}
+Devuelve el promedio de euros que gasta el usuario cada día en comidas.
+\subsection{\textbf{RF22-Calcular gasto mensual}}
 \label{sec-2-2-22}
-
-\subsection{\textbf{RF23-Mostrar recetas disponibles}: devuelve una lista con todas las recetas que, según los ingredientes disponibles y las dietas que sigue, se pueden cocinar.}
+Retorna la cantidad de euros que el usuario ha gastado este mes entre las comidas realizadas.
+\subsection{\textbf{RF23-Mostrar recetas disponibles}}
 \label{sec-2-2-23}
-
-\subsection{\textbf{RF24-Calcular precio de una dieta}: devuelve el coste de llevar a cabo cada receta de una dieta para cada supermercado.}
+Devuelve una lista con todas las recetas que, según los ingredientes disponibles y las dietas que sigue, se pueden cocinar.
+\subsection{\textbf{RF24-Calcular precio de una dieta}}
 \label{sec-2-2-24}
-
-\subsection{\textbf{RF25-Identificar usuario}: comprueba si los datos proporcionados por el usuarios anónimo coinciden con los de algún usuario registrado en el sistema y devuelve su clave.}
+Devuelve el coste de llevar a cabo cada receta de una dieta para cada supermercado.
+\subsection{\textbf{RF25-Identificar usuario}}
 \label{sec-2-2-25}
-
-\subsection{\textbf{RF26-Listar dieta completa}: muestra toda la información de las recetas asociadas a una dieta.}
+Comprueba si los datos proporcionados por el usuarios anónimo coinciden con los de algún usuario registrado en el sistema y devuelve su clave.
+\subsection{\textbf{RF26-Listar dieta completa}}
 \label{sec-2-2-26}
-
-\subsection{\textbf{RF27-Listar dietas}: recoge del sistema todas las dietas asociadas al usuario y los devuelve en una lista.}
+Muestra toda la información de las recetas asociadas a una dieta.
+\subsection{\textbf{RF27-Listar dietas}}
 \label{sec-2-2-27}
-
-\subsection{\textbf{RF28-Listar recetas}: devuelve una lista con todas las recetas del sistema, tanto las que pertenecen a alguna de nuestras dietas como las que no.}
+Recoge del sistema todas las dietas asociadas al usuario y los devuelve en una lista.
+\subsection{\textbf{RF28-Listar recetas}}
 \label{sec-2-2-28}
-
-\subsection{\textbf{RF29-Mostrar datos usuario}: muestra los campos registrados asociados al identificador de usuario.}
+Devuelve una lista con todas las recetas del sistema, tanto las que pertenecen a alguna de nuestras dietas como las que no.
+\subsection{\textbf{RF29-Mostrar datos usuario}}
 \label{sec-2-2-29}
-
-\subsection{\textbf{RF30-Listar comidas}: lista todos los platos que ha llevado a cabo el usuario del sistema.}
+Muestra los campos registrados asociados al identificador de usuario.
+\subsection{\textbf{RF30-Listar comidas}}
 \label{sec-2-2-30}
-
-\subsection{\textbf{RF31-Eliminar comida}: borra una comida registrada a partir de la receta y el identificador de usuario registrado.}
+Lista todos los platos que ha llevado a cabo el usuario del sistema.
+\subsection{\textbf{RF31-Eliminar comida}}
 \label{sec-2-2-31}
-
-\subsection{\textbf{Validación cruzada de requisitos}}
-\label{sec-2-2-32}
+Borra una comida registrada a partir de la receta y el identificador de usuario registrado.
+\section{\textbf{Validación cruzada de requisitos}}
+\label{sec-2-3}
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\linewidth]{./refinamientos/tablaRF1.png}
@@ -788,16 +788,19 @@ cifras, separados por barras ('/').
 \end{figure}
 
 \section{Restricciones semánticas}
-\label{sec-2-3}
-\subsection{RS1-No se pueden registrar usuarios con username repetidos.}
-\label{sec-2-3-1}
-\subsection{RS2-Todas las dietas deben estar asociadas a un usuario registrado.}
-\label{sec-2-3-2}
+\label{sec-2-4}
+\subsection{RS1}
+\label{sec-2-4-1}
+No se pueden registrar usuarios con username repetidos.
+
+\subsection{RS2}
+\label{sec-2-4-2}
+Todas las dietas deben estar asociadas a un usuario registrado.
 \chapter{Esquema caja negra}
 \label{sec-3}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/cajanegra.png}
+\includegraphics[width=1\linewidth]{./refinamientos/cajanegra.png}
 \caption{Caja Negra}
 \label{fig:Caja Negra}
 \medskip
@@ -810,7 +813,7 @@ cifras, separados por barras ('/').
 \label{sec-4-1}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/dfd0.png}
+\includegraphics[width=1\linewidth]{./refinamientos/dfd0.png}
 \caption{Esquema armazón}
 \label{fig:Esquema armazón}
 \medskip
@@ -821,7 +824,7 @@ cifras, separados por barras ('/').
 \label{sec-4-2}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/externo0.png}
+\includegraphics[width=1\linewidth]{./refinamientos/externo0.png}
 \caption{Externo 0}
 \label{fig:Externo 0}
 \medskip
@@ -845,7 +848,7 @@ cifras, separados por barras ('/').
 \label{sec-5-1}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/dfd1.png}
+\includegraphics[width=1\linewidth]{./refinamientos/dfd1.png}
 \caption{Diagrama de flujo de datos 1}
 \label{fig:Diagrama de flujo de datos 1}
 \medskip
@@ -856,7 +859,7 @@ cifras, separados por barras ('/').
 \label{sec-5-2}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/externo1.png}
+\includegraphics[width=1\linewidth]{./refinamientos/externo1.png}
 \caption{Externo 1}
 \label{fig:Externo 1}
 \medskip
@@ -880,7 +883,7 @@ cifras, separados por barras ('/').
 \label{sec-6-1}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.95\linewidth]{./refinamientos/dfd2.png}
+\includegraphics[width=1\linewidth]{./refinamientos/dfd2.png}
 \caption{Diagrama de flujo de datos 2}
 \label{fig:Diagrama de flujo de datos 2}
 \medskip
@@ -891,7 +894,7 @@ cifras, separados por barras ('/').
 \label{sec-6-2}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/externo21.png}
+\includegraphics[width=1\linewidth]{./refinamientos/externo21.png}
 \caption{Externo 2.1}
 \label{fig:Externo 2.1}
 \medskip
@@ -901,7 +904,7 @@ cifras, separados por barras ('/').
 
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/externo22.png}
+\includegraphics[width=1\linewidth]{./refinamientos/externo22.png}
 \caption{Externo 2.2}
 \label{fig:Externo 2.2}
 \medskip
@@ -912,7 +915,7 @@ cifras, separados por barras ('/').
 \label{sec-6-3}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.8\linewidth]{./refinamientos/er2.png}
+\includegraphics[width=0.9\linewidth]{./refinamientos/er2.png}
 \caption{Entidad relación 2}
 \label{fig:Entidad relación 2}
 \medskip
@@ -923,7 +926,7 @@ cifras, separados por barras ('/').
 \label{sec-6-4}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./refinamientos/erfinal.png}
+\includegraphics[width=1\linewidth]{./refinamientos/erfinal.png}
 \caption{Entidad relación final}
 \label{fig:Entidad relación final}
 \medskip
@@ -967,7 +970,7 @@ NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_ope.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Compras/02_ope.png}
 \caption{Esquema Operación - 02}
 \label{fig:ope02}
 \medskip
@@ -977,7 +980,7 @@ NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_nav.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Compras/02_nav.png}
 \caption{Esquema Navegación - 02}
 \label{fig:nave02}
 \medskip
@@ -1076,7 +1079,7 @@ calorías.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_ope.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
@@ -1086,7 +1089,7 @@ calorías.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_nav.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/01_nav.png}
 \caption{Esquema Navegación - 01}
 \label{fig:nave01}
 \medskip
@@ -1101,7 +1104,7 @@ descripción y calorías.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_ope.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/02_ope.png}
 \caption{Esquema Operación - 02}
 \label{fig:ope02}
 \medskip
@@ -1109,16 +1112,16 @@ descripción y calorías.
 {}
 \end{figure}
 \item Esquema de navegación:
+\end{itemize}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_nav.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/02_nav.png}
 \caption{Esquema Navegación - 02}
 \label{fig:nave02}
 \medskip
 \footnotesize
 {}
 \end{figure}
-\end{itemize}
 
 \item Asociar un producto a un super a partir del IDProducto y el IDSuper.
 \begin{itemize}
@@ -1155,7 +1158,7 @@ teléfono y página web.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_ope.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Super/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
@@ -1165,7 +1168,7 @@ teléfono y página web.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_nav.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Super/01_nav.png}
 \caption{Esquema Navegación - 01}
 \label{fig:nave01}
 \medskip
@@ -1180,7 +1183,7 @@ supermercado a partir del IDSuper.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_ope.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Super/02_ope.png}
 \caption{Esquema Operación - 02}
 \label{fig:ope02}
 \medskip
@@ -1190,7 +1193,7 @@ supermercado a partir del IDSuper.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_nav.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Super/02_nav.png}
 \caption{Esquema Navegación - 02}
 \label{fig:nave02}
 \medskip
@@ -1210,7 +1213,7 @@ descripción.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_ope.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
@@ -1220,7 +1223,7 @@ descripción.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_nav.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/01_nav.png}
 \caption{Esquema Navegación - 01}
 \label{fig:nave01}
 \medskip
@@ -1235,7 +1238,7 @@ a partir del IDReceta.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_ope.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/02_ope.png}
 \caption{Esquema Operación - 02}
 \label{fig:ope02}
 \medskip
@@ -1243,16 +1246,16 @@ a partir del IDReceta.
 {}
 \end{figure}
 \item Esquema de navegación:
+\end{itemize}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_nav.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/02_nav.png}
 \caption{Esquema Navegación - 02}
 \label{fig:nave02}
 \medskip
 \footnotesize
 {}
 \end{figure}
-\end{itemize}
 
 \item Insertar una asociación de un producto a partir de su
 IDProducto y una receta a partir de su IDReceta con una
@@ -1341,7 +1344,7 @@ descripción.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_ope.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Dietas/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
@@ -1349,21 +1352,22 @@ descripción.
 {}
 \end{figure}
 \item Esquema de navegación:
+\end{itemize}
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_nav.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Dietas/01_nav.png}
 \caption{Esquema Navegación - 01}
 \label{fig:nave01}
 \medskip
 \footnotesize
 {}
 \end{figure}
-\end{itemize}
 
 \item Insertar una asociación de una receta a partir de su IDReceta a
 una dieta identificada por su IDDieta.
 \begin{itemize}
 \item Esquema de operación:
+\end{itemize}
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_ope.png}
@@ -1373,7 +1377,9 @@ una dieta identificada por su IDDieta.
 \footnotesize
 {}
 \end{figure}
+\begin{itemize}
 \item Esquema de navegación:
+\end{itemize}
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_nav.png}
@@ -1383,12 +1389,12 @@ una dieta identificada por su IDDieta.
 \footnotesize
 {}
 \end{figure}
-\end{itemize}
 
 \item Eliminar asociación de una receta a partir de su IDReceta de
 una dieta identificada por IDDieta.
 \begin{itemize}
 \item Esquema de operación:
+\end{itemize}
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_ope.png}
@@ -1398,7 +1404,9 @@ una dieta identificada por IDDieta.
 \footnotesize
 {}
 \end{figure}
+\begin{itemize}
 \item Esquema de navegación:
+\end{itemize}
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_nav.png}
@@ -1408,7 +1416,6 @@ una dieta identificada por IDDieta.
 \footnotesize
 {}
 \end{figure}
-\end{itemize}
 
 \item Listar nombre y descripción de las dietas de un usuario a
 partir de su IDUsuario.
@@ -1519,7 +1526,7 @@ usuario a partir de su IDUsuario. Para ello divide el resultado de las siguiente
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/12_ope.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Estadisticas/12_ope.png}
 \caption{Esquema Operación - 1.2}
 \label{fig:ope12}
 \medskip
@@ -1529,7 +1536,7 @@ usuario a partir de su IDUsuario. Para ello divide el resultado de las siguiente
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/12_nav.png}
+\includegraphics[width=0.6\linewidth]{./operaciones/img/Estadisticas/12_nav.png}
 \caption{Esquema Navegación - 1.2}
 \label{fig:nave12}
 \medskip
@@ -1568,7 +1575,7 @@ IDUsuario. Para ello divide el resultado de las siguientes operaciones:
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/22_ope.png}
+\includegraphics[width=0.7\linewidth]{./operaciones/img/Estadisticas/22_ope.png}
 \caption{Esquema Operación - 2.2}
 \label{fig:ope22}
 \medskip
@@ -1578,7 +1585,7 @@ IDUsuario. Para ello divide el resultado de las siguientes operaciones:
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/22_nav.png}
+\includegraphics[width=0.7\linewidth]{./operaciones/img/Estadisticas/22_nav.png}
 \caption{Esquema Navegación - 2.2}
 \label{fig:nave22}
 \medskip
@@ -1679,7 +1686,7 @@ NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_ope.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
@@ -1689,7 +1696,7 @@ NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_nav.png}
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/01_nav.png}
 \caption{Esquema Navegación - 01}
 \label{fig:nave01}
 \medskip
@@ -1829,7 +1836,7 @@ username y password.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_ope.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
@@ -1839,7 +1846,7 @@ username y password.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_nav.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/01_nav.png}
 \caption{Esquema Navegación - 01}
 \label{fig:nave01}
 \medskip
@@ -1854,7 +1861,7 @@ NOTA: Esta operación lanza las operaciones de borrado de comidas, compras y die
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_ope.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/02_ope.png}
 \caption{Esquema Operación - 02}
 \label{fig:ope02}
 \medskip
@@ -1864,7 +1871,7 @@ NOTA: Esta operación lanza las operaciones de borrado de comidas, compras y die
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_nav.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/02_nav.png}
 \caption{Esquema Navegación - 02}
 \label{fig:nave02}
 \medskip
@@ -1879,7 +1886,7 @@ de un usuario a partir de su IDUsuario.
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_ope.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/03_ope.png}
 \caption{Esquema Operación - 03}
 \label{fig:ope03}
 \medskip
@@ -1889,7 +1896,7 @@ de un usuario a partir de su IDUsuario.
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_nav.png}
+\includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/03_nav.png}
 \caption{Esquema Navegación - 03}
 \label{fig:nave03}
 \medskip
@@ -1898,16 +1905,62 @@ de un usuario a partir de su IDUsuario.
 \end{figure}
 \end{itemize}
 \end{enumerate}
+\chapter{Diseño relacional}
+\label{sec-8}
+\section{Diseño lógico relacional}
+\label{sec-8-1}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/logico.png}
+\caption{Diseño lógico - 01}
+\label{fig:DLR}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\section{Normalización}
+\label{sec-8-2}
+
+\section{Diseño físico relacional}
+\label{sec-8-3}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/01_ope.png}
+\caption{Esquema Operación - 01}
+\label{fig:ope01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+
 
 \chapter{Interface}
-\label{sec-8}
-
-\chapter{Manual de usuario}
 \label{sec-9}
 
-
-
-\chapter{LOS PRODUCTOS y SUPERMERCADOS SON POBLADOS POR EL SISTEMA.}
+\chapter{Manual de usuario}
 \label{sec-10}
+\begin{enumerate}
+\item En primer lugar es necesario configurar el acceso a una base de
+datos oracle, la definición de host, user y password se hace en
+el fichero \textbf{include/login.db}.
+\item En segundo lugar hay que crear la estructura de la base de datos
+para ello se incluyen ficheros \textbf{.sql}:
+\begin{itemize}
+\item \textbf{tablas.sql}: Estructura de la base de datos.
+\item \textbf{datos.sql}: Datos de prueba que pueblan las tablas de la base
+de datos.
+\item \textbf{consultas.sql}: Funciones y procedimientos de los que hace
+uso la aplicación.
+\end{itemize}
+\item En tercer lugar es necesario alojar el contenido de la
+aplicación en un servidor web (puede ser local).
+\item Por último para acceder a la aplicación existe un usuario
+      \textbf{admin} con password \textbf{admin}.
+\end{enumerate}
+
+
+Una vez identificado en el sistema como un usuario registrado,
+estará disponible toda la funcionalidad de la aplicación accediendo
+a cada una de las operaciones de cada proceso desde el menú superior.
 % Emacs 24.3.1 (Org mode 8.2.4)
 \end{document}

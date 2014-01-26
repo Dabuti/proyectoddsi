@@ -1,0 +1,138 @@
+#wrapper_content {
+    border: 1px solid black;
+    min-height: 100%;
+    width: 980px;
+    height: auto !important;
+    margin: 0 auto -252px !important;
+    height: 100% !important;
+}
+
+#wrapper_debug {
+    height: 250px !important;
+}
+
+
+/* Login */
+.loginform-in {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D6E5F5;
+    border-radius: 3px 3px 3px 3px;
+    height: 350px;
+    margin: auto;
+    padding: 15px;
+    width: 460px;
+}
+
+.loginform-in h1{
+    color: #428bca;
+}
+
+.loginform-in fieldset {
+    border: 0px;
+    margin: 20px auto;
+    padding: 0 0 10px;
+    width: 87%;
+}
+
+.loginbutton {
+    background: -moz-linear-gradient(center top , #F1F1F1, #E0E0E0) repeat scroll 0 0 transparent;
+    border: 1px solid #A7A7A7;
+    border-radius: 3px 3px 3px 3px;
+    color: #444444;
+    cursor: pointer;
+    font-family: "Helvetica Neue";
+    font-size: 13px;
+    font-weight: normal;
+    height: 29px;
+    letter-spacing: 1px;
+    width: 92px;
+}
+
+.loginform-in fieldset label {
+    color: #7D7D7D;
+    float: left;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0 0;
+    width: 140px;
+}
+
+.loginform-in fieldset input[type="text"], input[type="password"], fieldset select {
+    border: 1px solid #CBC7C5;
+    border-radius: 3px 3px 3px 3px;
+    height: 33px;
+    padding: 1px 1px 1px 3px;
+    width: 250px;
+}
+
+.loginform-in .row_username, .row_password, .row_submit{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.loginform-in .singup span{
+    cursor: pointer;
+    color: #428bca;
+    font-weight: bold;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+#add_err{
+    display: inline-block !important;
+    height: 48px;
+}
+
+#add_err img, span{ float: left; }
+
+#add_err span{
+    line-height: 60px;
+    margin-left: 15px;
+}
+
+#add_err .clearb{ clear: both; }
+
+/* Terminal */
+
+#wrapper_terminal{
+    height: 100%;
+    border: 1px solid #428bca;
+}
+
+#terminal_top{
+    height: 30px;
+    background: #728BAC;
+}
+
+#terminal_top div{
+    display:block;
+    width: 180px;
+    margin: 0 auto;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+#terminal_content{
+    background: black;
+    height: 220px;
+    overflow-y: scroll;
+}
+
+#terminal_content div:first-child{
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+.terminal_line {
+    color: white;
+    margin-left: 5px;
+}
+
+.table_sql{
+    margin: 0 auto;
+}
+
+#module_content{
+    overflow-y: scroll !important;
+}

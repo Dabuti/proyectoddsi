@@ -777,7 +777,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.5\linewidth]{./operaciones/img/Compras/02_ope.png}
+         \includegraphics[width=0.3\linewidth]{./operaciones/img/Compras/02_ope.png}
          \caption{Esquema Operación - 02}
          \label{fig:ope02}
          \medskip
@@ -789,7 +789,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.5\linewidth]{./operaciones/img/Compras/02_nav.png}
+         \includegraphics[width=0.4\linewidth]{./operaciones/img/Compras/02_nav.png}
          \caption{Esquema Navegación - 02}
          \label{fig:nave02}
          \medskip
@@ -1769,25 +1769,6 @@
          {}
          \end{figure}
        #+end_LaTeX
-
-** Normalización
-
-** Diseño físico relacional
-       #+begin_LaTeX
-         \begin{figure}[!htp]
-         \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/01_ope.png}
-         \caption{Esquema Operación - 01}
-         \label{fig:ope01}
-         \medskip
-         \footnotesize
-         {}
-         \end{figure}
-       #+end_LaTeX
-
-
-
-* Interface
 
 * Manual de usuario
    1. En primer lugar es necesario configurar el acceso a una base de
