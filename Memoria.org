@@ -582,9 +582,9 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/0externo0.png}
-         \caption{Caja Negra}
-         \label{fig:Caja Negra}
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo0.png}
+         \caption{Externo 0}
+         \label{fig:Externo 0}
          \medskip
          \footnotesize
          {}
@@ -595,7 +595,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/er0.png}
+         \includegraphics[width=0.6\linewidth]{./refinamientos/er0.png}
          \caption{Entidad relación 0}
          \label{fig:Entidad relación 0}
          \medskip
@@ -606,14 +606,108 @@
 
 * Refinamiento 1
 ** DFD 1
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/dfd1.png}
+         \caption{Diagrama de flujo de datos 1}
+         \label{fig:Diagrama de flujo de datos 1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Esquema externo 1
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo1.png}
+         \caption{Externo 1}
+         \label{fig:Externo 1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Entidad Relación 1
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.7\linewidth]{./refinamientos/er1.png}
+         \caption{Entidad relación 1}
+         \label{fig:Entidad relación 1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 * Refinamiento 2
 ** DFD 2 (Esquema Armazón)
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.95\linewidth]{./refinamientos/dfd2.png}
+         \caption{Diagrama de flujo de datos 2}
+         \label{fig:Diagrama de flujo de datos 2}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Esquema externo 2
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo21.png}
+         \caption{Externo 2.1}
+         \label{fig:Externo 2.1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo22.png}
+         \caption{Externo 2.2}
+         \label{fig:Externo 2.2}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Entidad Relación 2
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.8\linewidth]{./refinamientos/er2.png}
+         \caption{Entidad relación 2}
+         \label{fig:Entidad relación 2}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Entidad Relación final (atributos)
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/erfinal.png}
+         \caption{Entidad relación final}
+         \label{fig:Entidad relación final}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 * Esquemas de Operación y Navegación
 ** Proceso: Gestión Compras
@@ -696,7 +790,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-
+    
     4. Insertar una nueva línea de compra a partir del IDCompra, IDProducto
        IDSuper, cantidad y precio.
        - Esquema de operación:
@@ -860,7 +954,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-
+       
     2. Modificar nombre, dirección, teléfono y página web de un
        supermercado a partir del IDSuper.
        - Esquema de operación:
@@ -887,7 +981,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-
+       
 ** Proceso: Gestión Recetas
 *** Lista de operaciones
     1. Insertar una receta a partir del nombre, personas, tiempo y
@@ -1162,7 +1256,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-
+	 
     6. Insertar una asociacion entre una dieta por su IDDieta con un usuario por su IDUsuario.
        - Esquema de operación:
          #+begin_LaTeX
@@ -1298,7 +1392,85 @@
          {}
          \end{figure}
        #+end_LaTeX
-//TODO ELIMINAR COMIDA 
+
+    4. Eliminar una asociación entre una comida con un IDComida y una receta con IDReceta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/04_ope.png}
+         \caption{Esquema Operación - 04}
+         \label{fig:ope04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/04_nav.png}
+         \caption{Esquema Navegación - 04}
+         \label{fig:nave04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    5. Eliminar una asociación entre una comida a partir de su IDComida y un usuario a partir de su IDUsuario.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/05_ope.png}
+         \caption{Esquema Operación - 05}
+         \label{fig:ope05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/05_nav.png}
+         \caption{Esquema Navegación - 05}
+         \label{fig:nave05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    6. Eliminar una comida a partir de su IDComida.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/06_ope.png}
+         \caption{Esquema Operación - 06}
+         \label{fig:ope06}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/06_nav.png}
+         \caption{Esquema Navegación - 06}
+         \label{fig:nave06}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+	
 
 ** Proceso: Gestión Usuarios
 *** Lista de operaciones
