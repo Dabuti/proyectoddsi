@@ -790,7 +790,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-    
+
     4. Insertar una nueva línea de compra a partir del IDCompra, IDProducto
        IDSuper, cantidad y precio.
        - Esquema de operación:
@@ -954,7 +954,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-       
+
     2. Modificar nombre, dirección, teléfono y página web de un
        supermercado a partir del IDSuper.
        - Esquema de operación:
@@ -981,7 +981,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-       
+
 ** Proceso: Gestión Recetas
 *** Lista de operaciones
     1. Insertar una receta a partir del nombre, personas, tiempo y
@@ -1256,7 +1256,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-	 
+
     6. Insertar una asociacion entre una dieta por su IDDieta con un usuario por su IDUsuario.
        - Esquema de operación:
          #+begin_LaTeX
@@ -1639,7 +1639,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-	
+
 ** Proceso: Gestión Usuarios
 *** Lista de operaciones
    1. Insertar un usuario a partir de su nombre, apellido1, apellido2,
@@ -1727,7 +1727,22 @@
 * Interface
 
 * Manual de usuario
-  
+   1. En primer lugar es necesario configurar el acceso a una base de
+      datos oracle, la definición de host, user y password se hace en
+      el fichero *include/login.db*.
+   2. En segundo lugar hay que crear la estructura de la base de datos
+      para ello se incluyen ficheros *.sql*:
+      - *tablas.sql*: Estructura de la base de datos.
+      - *datos.sql*: Datos de prueba que pueblan las tablas de la base
+        de datos.
+      - *consultas.sql*: Funciones y procedimientos de los que hace
+        uso la aplicación.
+   3. En tercer lugar es necesario alojar el contenido de la
+      aplicación en un servidor web (puede ser local).
+   4. Por último para acceder a la aplicación existe un usuario
+      *admin* con password *admin*.
 
 
-* LOS PRODUCTOS y SUPERMERCADOS SON POBLADOS POR EL SISTEMA.
+   Una vez identificado en el sistema como un usuario registrado,
+   estará disponible toda la funcionalidad de la aplicación accediendo
+   a cada una de las operaciones de cada proceso desde el menú superior.
