@@ -107,7 +107,7 @@
    - *precio*: número que indica el coste total.
    - *fecha*: cuando se realizó la adquisición.
 
-\\newpage
+\newpage
 ** Registro de dietas
    Con todos los ingredientes adquirdos se pueden cocinar recetas. Las
    recetas se describen y se almacena en el sistema teniendo en cuenta
@@ -153,7 +153,7 @@
    ofrecerá la opción de eliminar una comida registrada, para subsanar
    posibles errores de registro.
 
-\\newpage
+\newpage
 ** Registro de usuarios
    La base de usuarios estarán registrados, permitiéndoles realizar
    dietas específicas, comidas, compras o recetas. Sus datos serían:
@@ -459,69 +459,100 @@
       cifras, separados por barras ('/').
 
 ** Requisitos funcionales
-*** *RF1-Alta de un producto*: registra un producto en el sistema a partir de los datos de un producto proporcionados por un usuario.
+*** *RF1-Alta de un producto*
+    Registra un producto en el sistema a partir de los datos de un producto proporcionados por un usuario.
 
-*** *RF2-Modificar un producto*: modifica los datos de un producto almacenado en el sistema por los proporcionados por el usuario.
+*** *RF2-Modificar un producto*
+    Modifica los datos de un producto almacenado en el sistema por los proporcionados por el usuario.
 
-*** *RF3-Listar productos comprados*: devuelve los productos comprados por el usuario cuyo código se ha pasado como parámetro.
+*** *RF3-Listar productos comprados*
+    Devuelve los productos comprados por el usuario cuyo código se ha pasado como parámetro.
 
-*** *RF4-Registrar un super*: añade un nuevo supermercado al sistema con la información facilitada por el usuario.
+*** *RF4-Registrar un super*
+    Añade un nuevo supermercado al sistema con la información facilitada por el usuario.
 
-*** *RF5-Modificar un super*: altera la información de un supermercado registrado en el sistema por los nuevos datos suministrados.
+*** *RF5-Modificar un super*
+    Altera la información de un supermercado registrado en el sistema por los nuevos datos suministrados.
 
-*** *RF6-Nueva compra*: almacena una compra nueva en el sistema con la fecha actual y el identificador del usuario que la ha iniciado.
+*** *RF6-Nueva compra*
+    Almacena una compra nueva en el sistema con la fecha actual y el identificador del usuario que la ha iniciado.
 
-*** *RF7-Añadir producto a compra*: incluye una cantidad determinada de artículos identificados por los datos proporcionados por el usuario y su importe en euros.
+*** *RF7-Añadir producto a compra*
+    Incluye una cantidad determinada de artículos identificados por los datos proporcionados por el usuario y su importe en euros.
 
-*** *RF8-Eliminar producto de compra*: borra de una compra el producto adquirido en un supermercado  por el usuario.
+*** *RF8-Eliminar producto de compra*
+    Borra de una compra el producto adquirido en un supermercado  por el usuario.
 
-*** *RF9-Añadir nueva dieta*: agrega una nueva dieta a las almacenadas en el sistema a partir de los datos dados por el usuario.
+*** *RF9-Añadir nueva dieta*
+    Agrega una nueva dieta a las almacenadas en el sistema a partir de los datos dados por el usuario.
 
-*** *RF10-Añadir receta a dieta*: incluye una receta en una dieta, ambas identificadas por los datos proporcionador por el usuario.
+*** *RF10-Añadir receta a dieta*
+    Incluye una receta en una dieta, ambas identificadas por los datos proporcionador por el usuario.
 
-*** *RF11-Eliminar receta de dieta*: borra una receta de una dieta determinada, según los datos proporcionados por el usuario.
+*** *RF11-Eliminar receta de dieta*
+    Borra una receta de una dieta determinada, según los datos proporcionados por el usuario.
 
-*** *RF12-Añadir nueva receta*: registra una receta en el sistema partiendo de los datos de una receta proporcionados por un usuario.
+*** *RF12-Añadir nueva receta*
+    Registra una receta en el sistema partiendo de los datos de una receta proporcionados por un usuario.
 
-*** *RF13-Añadir producto a receta*: registra un ingrediente, junto con su cantidad, en una receta almacenada en el sistema, a partir de los datos introducidos por el usuario.
+*** *RF13-Añadir producto a receta*
+    Registra un ingrediente, junto con su cantidad, en una receta almacenada en el sistema, a partir de los datos introducidos por el usuario.
 
-*** *RF14-Eliminar producto de receta*: elimina el producto identificado por el usuario de la receta proporcionada por el mismo.
+*** *RF14-Eliminar producto de receta*
+    Elimina el producto identificado por el usuario de la receta proporcionada por el mismo.
 
-*** *RF15-Modificar una receta*: altera la información de una receta registrada en el sistema por los nuevos datos que el usuario proporcione.
+*** *RF15-Modificar una receta*
+    Altera la información de una receta registrada en el sistema por los nuevos datos que el usuario proporcione.
 
-*** *RF16-Dar de alta un usuario*: registra un usuario nuevo en el sistema a partir de la información proporcionada por un usuario anónimo.
+*** *RF16-Dar de alta un usuario*
+    Registra un usuario nuevo en el sistema a partir de la información proporcionada por un usuario anónimo.
 
-*** *RF17-Modificar un usuario*: modifica los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
+*** *RF17-Modificar un usuario*
+    Modifica los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
 
-*** *RF18-Elimina un usuario*: suprime los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
+*** *RF18-Elimina un usuario*
+    Suprime los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
 
-*** *RF19-Hacer comida*: registra la elaboración de una receta llevada a cabo por un usuario del sistema en la fecha actual.
+*** *RF19-Hacer comida*
+    Registra la elaboración de una receta llevada a cabo por un usuario del sistema en la fecha actual.
 
-*** *RF20-Listar stock*: muestra la cantidad de productos disponibles para un usuario.
+*** *RF20-Listar stock*
+    Muestra la cantidad de productos disponibles para un usuario.
 
-*** *RF21-Calcular gasto diario*: devuelve el promedio de euros que gasta el usuario cada día en comidas.
+*** *RF21-Calcular gasto diario*
+    Devuelve el promedio de euros que gasta el usuario cada día en comidas.
 
-*** *RF22-Calcular gasto mensual*: retorna la cantidad de euros que el usuario ha gastado este mes entre las comidas realizadas.
+*** *RF22-Calcular gasto mensual*
+    Retorna la cantidad de euros que el usuario ha gastado este mes entre las comidas realizadas.
 
-*** *RF23-Mostrar recetas disponibles*: devuelve una lista con todas las recetas que, según los ingredientes disponibles y las dietas que sigue, se pueden cocinar.
+*** *RF23-Mostrar recetas disponibles*
+    Devuelve una lista con todas las recetas que, según los ingredientes disponibles y las dietas que sigue, se pueden cocinar.
 
-*** *RF24-Calcular precio de una dieta*: devuelve el coste de llevar a cabo cada receta de una dieta para cada supermercado.
+*** *RF24-Calcular precio de una dieta*
+    Devuelve el coste de llevar a cabo cada receta de una dieta para cada supermercado.
 
-*** *RF25-Identificar usuario*: comprueba si los datos proporcionados por el usuarios anónimo coinciden con los de algún usuario registrado en el sistema y devuelve su clave.
+*** *RF25-Identificar usuario*
+    Comprueba si los datos proporcionados por el usuarios anónimo coinciden con los de algún usuario registrado en el sistema y devuelve su clave.
 
-*** *RF26-Listar dieta completa*: muestra toda la información de las recetas asociadas a una dieta.
+*** *RF26-Listar dieta completa*
+    Muestra toda la información de las recetas asociadas a una dieta.
 
-*** *RF27-Listar dietas*: recoge del sistema todas las dietas asociadas al usuario y los devuelve en una lista.
+*** *RF27-Listar dietas*
+    Recoge del sistema todas las dietas asociadas al usuario y los devuelve en una lista.
 
-*** *RF28-Listar recetas*: devuelve una lista con todas las recetas del sistema, tanto las que pertenecen a alguna de nuestras dietas como las que no.
+*** *RF28-Listar recetas*
+    Devuelve una lista con todas las recetas del sistema, tanto las que pertenecen a alguna de nuestras dietas como las que no.
 
-*** *RF29-Mostrar datos usuario*: muestra los campos registrados asociados al identificador de usuario.
+*** *RF29-Mostrar datos usuario*
+    Muestra los campos registrados asociados al identificador de usuario.
 
-*** *RF30-Listar comidas*: lista todos los platos que ha llevado a cabo el usuario del sistema.
+*** *RF30-Listar comidas*
+    Lista todos los platos que ha llevado a cabo el usuario del sistema.
 
-*** *RF31-Eliminar comida*: borra una comida registrada a partir de la receta y el identificador de usuario registrado.
+*** *RF31-Eliminar comida*
+    Borra una comida registrada a partir de la receta y el identificador de usuario registrado.
 
-*** *Validación cruzada de requisitos*
+** *Validación cruzada de requisitos*
 #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
@@ -548,14 +579,16 @@
 
 
 ** Restricciones semánticas
-*** RS1-No se pueden registrar usuarios con username repetidos.
-*** RS2-Todas las dietas deben estar asociadas a un usuario registrado.
+*** RS1
+    No se pueden registrar usuarios con username repetidos.
+*** RS2
+    Todas las dietas deben estar asociadas a un usuario registrado.
 
 * Esquema caja negra
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/cajanegra.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/cajanegra.png}
          \caption{Caja Negra}
          \label{fig:Caja Negra}
          \medskip
@@ -569,7 +602,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/dfd0.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/dfd0.png}
          \caption{Esquema armazón}
          \label{fig:Esquema armazón}
          \medskip
@@ -582,7 +615,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/externo0.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/externo0.png}
          \caption{Externo 0}
          \label{fig:Externo 0}
          \medskip
@@ -609,7 +642,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/dfd1.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/dfd1.png}
          \caption{Diagrama de flujo de datos 1}
          \label{fig:Diagrama de flujo de datos 1}
          \medskip
@@ -622,7 +655,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/externo1.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/externo1.png}
          \caption{Externo 1}
          \label{fig:Externo 1}
          \medskip
@@ -649,7 +682,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.95\linewidth]{./refinamientos/dfd2.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/dfd2.png}
          \caption{Diagrama de flujo de datos 2}
          \label{fig:Diagrama de flujo de datos 2}
          \medskip
@@ -662,7 +695,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/externo21.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/externo21.png}
          \caption{Externo 2.1}
          \label{fig:Externo 2.1}
          \medskip
@@ -674,7 +707,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/externo22.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/externo22.png}
          \caption{Externo 2.2}
          \label{fig:Externo 2.2}
          \medskip
@@ -687,7 +720,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.8\linewidth]{./refinamientos/er2.png}
+         \includegraphics[width=0.9\linewidth]{./refinamientos/er2.png}
          \caption{Entidad relación 2}
          \label{fig:Entidad relación 2}
          \medskip
@@ -700,7 +733,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./refinamientos/erfinal.png}
+         \includegraphics[width=1\linewidth]{./refinamientos/erfinal.png}
          \caption{Entidad relación final}
          \label{fig:Entidad relación final}
          \medskip
@@ -744,7 +777,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_ope.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Compras/02_ope.png}
          \caption{Esquema Operación - 02}
          \label{fig:ope02}
          \medskip
@@ -756,7 +789,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_nav.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Compras/02_nav.png}
          \caption{Esquema Navegación - 02}
          \label{fig:nave02}
          \medskip
@@ -852,7 +885,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_ope.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -864,7 +897,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_nav.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/01_nav.png}
          \caption{Esquema Navegación - 01}
          \label{fig:nave01}
          \medskip
@@ -879,7 +912,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_ope.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/02_ope.png}
          \caption{Esquema Operación - 02}
          \label{fig:ope02}
          \medskip
@@ -888,10 +921,10 @@
          \end{figure}
        #+end_LaTeX
        - Esquema de navegación:
-         #+begin_LaTeX
+       #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_nav.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Productos/02_nav.png}
          \caption{Esquema Navegación - 02}
          \label{fig:nave02}
          \medskip
@@ -934,7 +967,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_ope.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Super/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -946,7 +979,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_nav.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Super/01_nav.png}
          \caption{Esquema Navegación - 01}
          \label{fig:nave01}
          \medskip
@@ -961,7 +994,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_ope.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Super/02_ope.png}
          \caption{Esquema Operación - 02}
          \label{fig:ope02}
          \medskip
@@ -973,7 +1006,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_nav.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Super/02_nav.png}
          \caption{Esquema Navegación - 02}
          \label{fig:nave02}
          \medskip
@@ -990,7 +1023,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_ope.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -1002,7 +1035,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_nav.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/01_nav.png}
          \caption{Esquema Navegación - 01}
          \label{fig:nave01}
          \medskip
@@ -1017,7 +1050,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_ope.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/02_ope.png}
          \caption{Esquema Operación - 02}
          \label{fig:ope02}
          \medskip
@@ -1026,10 +1059,10 @@
          \end{figure}
        #+end_LaTeX
        - Esquema de navegación:
-         #+begin_LaTeX
+       #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_nav.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Recetas/02_nav.png}
          \caption{Esquema Navegación - 02}
          \label{fig:nave02}
          \medskip
@@ -1128,7 +1161,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_ope.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Dietas/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -1137,10 +1170,10 @@
          \end{figure}
        #+end_LaTeX
        - Esquema de navegación:
-         #+begin_LaTeX
+       #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_nav.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Dietas/01_nav.png}
          \caption{Esquema Navegación - 01}
          \label{fig:nave01}
          \medskip
@@ -1152,7 +1185,7 @@
     2. Insertar una asociación de una receta a partir de su IDReceta a
        una dieta identificada por su IDDieta.
        - Esquema de operación:
-         #+begin_LaTeX
+       #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
          \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_ope.png}
@@ -1164,7 +1197,7 @@
          \end{figure}
        #+end_LaTeX
        - Esquema de navegación:
-         #+begin_LaTeX
+       #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
          \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_nav.png}
@@ -1179,7 +1212,7 @@
     3. Eliminar asociación de una receta a partir de su IDReceta de
        una dieta identificada por IDDieta.
        - Esquema de operación:
-         #+begin_LaTeX
+       #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
          \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_ope.png}
@@ -1191,7 +1224,7 @@
          \end{figure}
        #+end_LaTeX
        - Esquema de navegación:
-         #+begin_LaTeX
+       #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
          \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_nav.png}
@@ -1318,7 +1351,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/12_ope.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Estadisticas/12_ope.png}
          \caption{Esquema Operación - 1.2}
          \label{fig:ope12}
          \medskip
@@ -1330,7 +1363,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/12_nav.png}
+         \includegraphics[width=0.6\linewidth]{./operaciones/img/Estadisticas/12_nav.png}
          \caption{Esquema Navegación - 1.2}
          \label{fig:nave12}
          \medskip
@@ -1372,7 +1405,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/22_ope.png}
+         \includegraphics[width=0.7\linewidth]{./operaciones/img/Estadisticas/22_ope.png}
          \caption{Esquema Operación - 2.2}
          \label{fig:ope22}
          \medskip
@@ -1384,7 +1417,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/22_nav.png}
+         \includegraphics[width=0.7\linewidth]{./operaciones/img/Estadisticas/22_nav.png}
          \caption{Esquema Navegación - 2.2}
          \label{fig:nave22}
          \medskip
@@ -1489,7 +1522,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_ope.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -1501,7 +1534,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_nav.png}
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/01_nav.png}
          \caption{Esquema Navegación - 01}
          \label{fig:nave01}
          \medskip
@@ -1648,7 +1681,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_ope.png}
+         \includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -1660,7 +1693,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_nav.png}
+         \includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/01_nav.png}
          \caption{Esquema Navegación - 01}
          \label{fig:nave01}
          \medskip
@@ -1675,7 +1708,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_ope.png}
+         \includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/02_ope.png}
          \caption{Esquema Operación - 02}
          \label{fig:ope02}
          \medskip
@@ -1687,7 +1720,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_nav.png}
+         \includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/02_nav.png}
          \caption{Esquema Navegación - 02}
          \label{fig:nave02}
          \medskip
@@ -1702,7 +1735,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_ope.png}
+         \includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/03_ope.png}
          \caption{Esquema Operación - 03}
          \label{fig:ope03}
          \medskip
@@ -1714,7 +1747,7 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_nav.png}
+         \includegraphics[width=0.4\linewidth]{./operaciones/img/Usuarios/03_nav.png}
          \caption{Esquema Navegación - 03}
          \label{fig:nave03}
          \medskip
@@ -1722,6 +1755,36 @@
          {}
          \end{figure}
        #+end_LaTeX
+
+* Diseño relacional
+** Diseño lógico relacional
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/logico.png}
+         \caption{Diseño lógico - 01}
+         \label{fig:DLR}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+** Normalización
+
+** Diseño físico relacional
+       #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/01_ope.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 
 
 * Interface
