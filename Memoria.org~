@@ -107,7 +107,7 @@
    - *precio*: número que indica el coste total.
    - *fecha*: cuando se realizó la adquisición.
 
-
+\\newpage
 ** Registro de dietas
    Con todos los ingredientes adquirdos se pueden cocinar recetas. Las
    recetas se describen y se almacena en el sistema teniendo en cuenta
@@ -153,9 +153,9 @@
    ofrecerá la opción de eliminar una comida registrada, para subsanar
    posibles errores de registro.
 
-
+\\newpage
 ** Registro de usuarios
-   La base de usuarios estarán registrados, permitiendoles realizar
+   La base de usuarios estarán registrados, permitiéndoles realizar
    dietas específicas, comidas, compras o recetas. Sus datos serían:
    - *nombre*: una serie de caracteres.
    - *primer apellido*: caracteres alfabéticos.
@@ -187,11 +187,11 @@
    dicha dieta.
 
    Por último, el usuario deberá poder obtener su gasto medio en
-   euros, tanto diario como mensual.
+   euros, tanto el diario como desde el inicio del presente mes.
 
 * Análisis de requisitos
 ** Requisitos de datos
-*** RD-1: Datos nuevo producto
+*** RD1-Datos nuevo producto
     - *Nombre*: una cadena de hasta 20 caracteres no vacía.
     - *Calorías*: un número decimal positivo.
     - *Descripción*: una cadena de hasta 200 caracteres.
@@ -238,6 +238,7 @@
 
 *** RD9-Datos nueva compra:
     - *Identificador* de usuario: un número entero.
+
 *** RD10-Datos compra:
     - *Identificador de compra*: un número entero.
     - *Identificador de usuario*: un número entero.
@@ -309,15 +310,15 @@
     - *Cantidad*: un número entero.
 
 *** RD23-Datos producto de receta a eliminar:
-    - Identificador de producto: un número entero.
-    - Identificador de receta: un número entero.
+    - *Identificador de producto*: un número entero.
+    - *Identificador de receta*: un número entero.
 
 *** RD24-Datos receta modificada:
-    - Identificador de receta: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres.
-    - Personas: un número entero.
-    - Tiempo: un número entero.
-    - Descripción: una cadena de hasta 200 caracteres.
+    - *Identificador de receta*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres.
+    - *Personas*: un número entero.
+    - *Tiempo*: un número entero.
+    - *Descripción*: una cadena de hasta 200 caracteres.
 
 *** RD25-Datos nuevo usuario:
     - *Nombre*: una cadena de hasta 20 caracteres no vacía.
@@ -327,169 +328,396 @@
     - *Contraseña*: una cadena alfanumérica de hasta 20 elementos.
 
 *** RD26-Datos usuario:
-    - Identificador de usuario: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres no vacía.
-    - Primer apellido: una cadena de hasta 20 caracteres.
-    - Segundo apellido: una cadena de hasta 20 caracteres.
-    - Nombre de usuario: una cadena de hasta 20 caracteres.
-    - Contraseña: una cadena alfanumérica de hasta 20 elementos.
+    - *Identificador de usuario*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Primer apellido*: una cadena de hasta 20 caracteres.
+    - *Segundo apellido*: una cadena de hasta 20 caracteres.
+    - *Nombre de usuario*: una cadena de hasta 20 caracteres.
+    - *Contraseña*: una cadena alfanumérica de hasta 20 elementos.
 
 *** RD27-Datos usuario modificado:
-    - Identificador de usuario: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres no vacía.
-    - Primer apellido: una cadena de hasta 20 caracteres.
-    - Segundo apellido: una cadena de hasta 20 caracteres.
-    - Contraseña: una cadena alfanumérica de hasta 20 elementos.
+    - *Identificador de usuario*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Primer apellido*: una cadena de hasta 20 caracteres.
+    - *Segundo apellido*: una cadena de hasta 20 caracteres.
+    - *Contraseña*: una cadena alfanumérica de hasta 20 elementos.
 *** RD28-Datos usuario a eliminar:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD29-Datos nueva comida:
-    - Identificador de usuario: un número entero.
-    - Identificador de receta: un número entero.
-    - Fecha: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el 		tercero por un conjunto de cuatro cifras, separados por barras ('/').
+    - *Identificador de usuario*: un número entero.
+    - *Identificador de receta*: un número entero.
+    - *Fecha*: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el 		tercero por un conjunto de cuatro cifras, separados por barras ('/').
 
 *** RD30-Datos comida:
-    - Identificador de usuario: un número entero.
-    - Identificador de receta: un número entero.
-    - Fecha: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el 		tercero por un conjunto de cuatro cifras, separados por barras ('/').
+    - *Identificador de usuario*: un número entero.
+    - *Identificador de receta*: un número entero.
+    - *Fecha*: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el 		tercero por un conjunto de cuatro cifras, separados por barras ('/').
 
 *** RD31-Identificador propietario de stock:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD32-Lista de stock:
-    - Identificador de producto: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres no vacía.
-    - Calorías: un número decimal positivo.
-    - Descripción: una cadena de hasta 200 caracteres.
-    - Cantidad: un número entero mayor que cero.
+    - *Identificador de producto*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Calorías*: un número decimal positivo.
+    - *Descripción*: una cadena de hasta 200 caracteres.
+    - *Cantidad*: un número entero mayor que cero.
 
 *** RD33-Identificador usuario para gasto diario:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD34-Valor de gasto diario:
-    - Gasto: un número decimal.
+    - *Gasto*: un número decimal.
 
 *** RD35-Identificador usuario para gasto mensual:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD36-Valor de gasto mensual:
-    - Gasto: un número decimal.
+    - *Gasto*: un número decimal.
 
 *** RD37-Usuario que consulta recetas disponibles:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD38-Lista recetas disponibles:
-    - Identificador de receta: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres no vacía.
-    - Personas: un número entero mayor que cero.
-    - Tiempo: un número entero mayor que cero.
-    - Descripción: una cadena de hasta 200 caracteres.
+    - *Identificador de receta*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Personas*: un número entero mayor que cero.
+    - *Tiempo*: un número entero mayor que cero.
+    - *Descripción*: una cadena de hasta 200 caracteres.
 
 *** RD39-Identificador de dieta a consultar:
-    - Identificador de dieta: un número entero.
+    - *Identificador de dieta*: un número entero.
 
 *** RD40-Coste por super:
-    - Identificador de super: un número entero.
-    - Nombre:  una cadena de hasta 20 caracteres no vacía.
-    - Dirección:  una cadena de hasta 30 caracteres.
-    - Teléfono: una cadena de hasta 9 caracteres numéricos.
-    - Página web: una cadena de hasta 20 caracteres.
-    - Gasto: un número decimal.
+    - *Identificador de super*: un número entero.
+    - *Nombre*:  una cadena de hasta 20 caracteres no vacía.
+    - *Dirección*:  una cadena de hasta 30 caracteres.
+    - *Teléfono*: una cadena de hasta 9 caracteres numéricos.
+    - *Página web*: una cadena de hasta 20 caracteres.
+    - *Gasto*: un número decimal.
 
 *** RD41-Datos de identificación:
-    - Nombre: una cadena de hasta 20 caracteres no vacía.
-    - Contraseña: una cadena alfanumérica de hasta 20 elementos no vacía.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Contraseña*: una cadena alfanumérica de hasta 20 elementos no vacía.
 
-*** RD42-Identificador creador de dieta completa:
-    - Identificador de usuario: un número entero.
+*** RD42-Identificador creador de dieta:
+    - *Identificador de usuario*: un número entero.
 
-*** RD43-Datos dieta completa:
-    - Identificador de dieta: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres no vacía.
-    - Descripción: una cadena de hasta 200 caracteres.
-
+*** RD43-Identificador usuario:
+    - *Identificador de usuario*: un número entero.
 *** RD44-Lista de recetas de dieta:
-    - Identificador de receta: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres.
-    - Personas: un número entero.
-    - Tiempo: un número entero.
-    - Descripción: una cadena de hasta 200 caracteres.
+    - *Identificador de receta*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres.
+    - *Personas*: un número entero.
+    - *Tiempo*: un número entero.
+    - *Descripción*: una cadena de hasta 200 caracteres.
 
 *** RD45-Identificador creador de dietas:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD46-Lista de dietas:
-    - Identificador de dieta: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres no vacía.
-    - Descripción: una cadena de hasta 200 caracteres.
+    - *Identificador de dieta*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres no vacía.
+    - *Descripción*: una cadena de hasta 200 caracteres.
 
 *** RD47-Identificador consultor de recetas:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD48-Lista de recetas:
-    - Identificador de receta: un número entero.
-    - Nombre: una cadena de hasta 20 caracteres.
-    - Personas: un número entero.
-    - Tiempo: un número entero.
-    - Descripción: una cadena de hasta 200 caracteres.
+    - *Identificador de receta*: un número entero.
+    - *Nombre*: una cadena de hasta 20 caracteres.
+    - *Personas*: un número entero.
+    - *Tiempo*: un número entero.
+    - *Descripción*: una cadena de hasta 200 caracteres.
 
 *** RD49-Identificador usuario propio:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD50-Datos usuario propio:
-    - Nombre: una cadena de hasta 20 caracteres.
-    - Primer apellido: una cadena de hasta 20 caracteres.
-    - Segundo apellido: una cadena de hasta 20 caracteres.
-    - Nombre de usuario: una cadena de hasta 20 caracteres.
-    - Contraseña: una cadena alfanumérica de hasta 20 elementos.
+    - *Nombre*: una cadena de hasta 20 caracteres.
+    - *Primer apellido*: una cadena de hasta 20 caracteres.
+    - *Segundo apellido*: una cadena de hasta 20 caracteres.
+    - *Nombre de usuario*: una cadena de hasta 20 caracteres.
+    - *Contraseña*: una cadena alfanumérica de hasta 20 elementos.
 
 *** RD51-Identificador cocinero:
-    - Identificador de usuario: un número entero.
+    - *Identificador de usuario*: un número entero.
 
 *** RD52-Lista de comidas:
-    - Identificador de usuario: un número entero.
-    - Identificador de receta: un número entero.
-    - Fecha: tres conjuntos de enteros formados los dos primeros por
-      conjuntos de dos cifras y el tercero por un conjunto de cuatro
-      cifras, separados por barras ('/').
-
-*** RD53-Datos cojmida a eliminar:
     - *Identificador de usuario*: un número entero.
     - *Identificador de receta*: un número entero.
     - *Fecha*: tres conjuntos de enteros formados los dos primeros por
       conjuntos de dos cifras y el tercero por un conjunto de cuatro
       cifras, separados por barras ('/').
+
+*** RD53-Datos comida a eliminar:
+    - *Identificador de usuario*: un número entero.
+    - *Identificador de receta*: un número entero.
+    - *Fecha*: tres conjuntos de enteros formados los dos primeros por
+      conjuntos de dos cifras y el tercero por un conjunto de cuatro
+      cifras, separados por barras ('/').
+
 ** Requisitos funcionales
+*** *RF1-Alta de un producto*: registra un producto en el sistema a partir de los datos de un producto proporcionados por un usuario.
+
+*** *RF2-Modificar un producto*: modifica los datos de un producto almacenado en el sistema por los proporcionados por el usuario.
+
+*** *RF3-Listar productos comprados*: devuelve los productos comprados por el usuario cuyo código se ha pasado como parámetro.
+
+*** *RF4-Registrar un super*: añade un nuevo supermercado al sistema con la información facilitada por el usuario.
+
+*** *RF5-Modificar un super*: altera la información de un supermercado registrado en el sistema por los nuevos datos suministrados.
+
+*** *RF6-Nueva compra*: almacena una compra nueva en el sistema con la fecha actual y el identificador del usuario que la ha iniciado.
+
+*** *RF7-Añadir producto a compra*: incluye una cantidad determinada de artículos identificados por los datos proporcionados por el usuario y su importe en euros.
+
+*** *RF8-Eliminar producto de compra*: borra de una compra el producto adquirido en un supermercado  por el usuario.
+
+*** *RF9-Añadir nueva dieta*: agrega una nueva dieta a las almacenadas en el sistema a partir de los datos dados por el usuario.
+
+*** *RF10-Añadir receta a dieta*: incluye una receta en una dieta, ambas identificadas por los datos proporcionador por el usuario.
+
+*** *RF11-Eliminar receta de dieta*: borra una receta de una dieta determinada, según los datos proporcionados por el usuario.
+
+*** *RF12-Añadir nueva receta*: registra una receta en el sistema partiendo de los datos de una receta proporcionados por un usuario.
+
+*** *RF13-Añadir producto a receta*: registra un ingrediente, junto con su cantidad, en una receta almacenada en el sistema, a partir de los datos introducidos por el usuario.
+
+*** *RF14-Eliminar producto de receta*: elimina el producto identificado por el usuario de la receta proporcionada por el mismo.
+
+*** *RF15-Modificar una receta*: altera la información de una receta registrada en el sistema por los nuevos datos que el usuario proporcione.
+
+*** *RF16-Dar de alta un usuario*: registra un usuario nuevo en el sistema a partir de la información proporcionada por un usuario anónimo.
+
+*** *RF17-Modificar un usuario*: modifica los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
+
+*** *RF18-Elimina un usuario*: suprime los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.
+
+*** *RF19-Hacer comida*: registra la elaboración de una receta llevada a cabo por un usuario del sistema en la fecha actual.
+
+*** *RF20-Listar stock*: muestra la cantidad de productos disponibles para un usuario.
+
+*** *RF21-Calcular gasto diario*: devuelve el promedio de euros que gasta el usuario cada día en comidas.
+
+*** *RF22-Calcular gasto mensual*: retorna la cantidad de euros que el usuario ha gastado este mes entre las comidas realizadas.
+
+*** *RF23-Mostrar recetas disponibles*: devuelve una lista con todas las recetas que, según los ingredientes disponibles y las dietas que sigue, se pueden cocinar.
+
+*** *RF24-Calcular precio de una dieta*: devuelve el coste de llevar a cabo cada receta de una dieta para cada supermercado.
+
+*** *RF25-Identificar usuario*: comprueba si los datos proporcionados por el usuarios anónimo coinciden con los de algún usuario registrado en el sistema y devuelve su clave.
+
+*** *RF26-Listar dieta completa*: muestra toda la información de las recetas asociadas a una dieta.
+
+*** *RF27-Listar dietas*: recoge del sistema todas las dietas asociadas al usuario y los devuelve en una lista.
+
+*** *RF28-Listar recetas*: devuelve una lista con todas las recetas del sistema, tanto las que pertenecen a alguna de nuestras dietas como las que no.
+
+*** *RF29-Mostrar datos usuario*: muestra los campos registrados asociados al identificador de usuario.
+
+*** *RF30-Listar comidas*: lista todos los platos que ha llevado a cabo el usuario del sistema.
+
+*** *RF31-Eliminar comida*: borra una comida registrada a partir de la receta y el identificador de usuario registrado.
+
+*** *Validación cruzada de requisitos*
+#+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/tablaRF1.png}
+         \caption{Requisitos funcionales}
+         \label{fig:Requisitos funcionales}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+#+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/tablaRF2.png}
+         \caption{Requisitos funcionales}
+         \label{fig:Requisitos funcionales}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+
 ** Restricciones semánticas
+*** RS1-No se pueden registrar usuarios con username repetidos.
+*** RS2-Todas las dietas deben estar asociadas a un usuario registrado.
 
 * Esquema caja negra
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/cajanegra.png}
+         \caption{Caja Negra}
+         \label{fig:Caja Negra}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 * Refinamiento 0
 ** DFD 0 (Esquema Armazón)
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/dfd0.png}
+         \caption{Esquema armazón}
+         \label{fig:Esquema armazón}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Esquema externo 0
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo0.png}
+         \caption{Externo 0}
+         \label{fig:Externo 0}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Entidad Relación 0
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.6\linewidth]{./refinamientos/er0.png}
+         \caption{Entidad relación 0}
+         \label{fig:Entidad relación 0}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 * Refinamiento 1
 ** DFD 1
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/dfd1.png}
+         \caption{Diagrama de flujo de datos 1}
+         \label{fig:Diagrama de flujo de datos 1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Esquema externo 1
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo1.png}
+         \caption{Externo 1}
+         \label{fig:Externo 1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Entidad Relación 1
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.7\linewidth]{./refinamientos/er1.png}
+         \caption{Entidad relación 1}
+         \label{fig:Entidad relación 1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 * Refinamiento 2
 ** DFD 2 (Esquema Armazón)
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.95\linewidth]{./refinamientos/dfd2.png}
+         \caption{Diagrama de flujo de datos 2}
+         \label{fig:Diagrama de flujo de datos 2}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Esquema externo 2
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo21.png}
+         \caption{Externo 2.1}
+         \label{fig:Externo 2.1}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/externo22.png}
+         \caption{Externo 2.2}
+         \label{fig:Externo 2.2}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Entidad Relación 2
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.8\linewidth]{./refinamientos/er2.png}
+         \caption{Entidad relación 2}
+         \label{fig:Entidad relación 2}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
 ** Entidad Relación final (atributos)
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./refinamientos/erfinal.png}
+         \caption{Entidad relación final}
+         \label{fig:Entidad relación final}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 * Esquemas de Operación y Navegación
 ** Proceso: Gestión Compras
 *** Lista de operaciones:
-    1. Listar el nombre, calorías y descripción de los productos y
-       nombre del supermercado comprados por un usuario a partir de su
-       IDUsuario.
+    1. Listar el nombre, las calorías, la descripción, la cantidad, el precio de los productos, el nombre del supermercado y la fecha de las compras realizadas por un usuario a partir de su IDUsuario.
        - Esquema de operación:
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/ope01.png}
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -501,7 +729,130 @@
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
-         \includegraphics[width=0.9\linewidth]{./operaciones/img/nave01.png}
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/01_nav.png}
+         \caption{Esquema Navegación - 01}
+         \label{fig:nave01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    2. Insertar una nueva compra.
+       NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_ope.png}
+         \caption{Esquema Operación - 02}
+         \label{fig:ope02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_nav.png}
+         \caption{Esquema Navegación - 02}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    3. Asociar una comprar a partir del IDUsuario del usuario y el IDCompra de la compra.
+       - Esquema de operación:
+       #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/03_ope.png}
+         \caption{Esquema Operación - 03}
+         \label{fig:ope03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/03_nav.png}
+         \caption{Esquema Navegación - 03}
+         \label{fig:nave03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+    
+    4. Insertar una nueva línea de compra a partir del IDCompra, IDProducto
+       IDSuper, cantidad y precio.
+       - Esquema de operación:
+       #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/04_ope.png}
+         \caption{Esquema Operación - 04}
+         \label{fig:ope04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/04_nav.png}
+         \caption{Esquema Navegación - 04}
+         \label{fig:nave04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    5. Eliminar una línea de compra a partir del IDCompra, IDProducto e IDSuper.
+       - Esquema de operación:
+       #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/05_ope.png}
+         \caption{Esquema Operación - 05}
+         \label{fig:ope05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/05_nav.png}
+         \caption{Esquema Navegación - 05}
+         \label{fig:nave05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+** Proceso: Gestión Productos
+*** Lista de operaciones
+    1. Insertar un producto a partir del nombre, descripción y
+       calorías.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_ope.png}
          \caption{Esquema Operación - 01}
          \label{fig:ope01}
          \medskip
@@ -509,98 +860,706 @@
          {}
          \end{figure}
        #+end_LaTeX
-    2. Insertar una nueva comprar a partir del IDUsuario del usuario.
-       NOTA: Fecha automática en la inserción. (Ningún dato de
-       entrada) (IDUsuario se pilla de la sesión).
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_nav.png}
+         \caption{Esquema Navegación - 01}
+         \label{fig:nave01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
-    3. Insertar una nueva línea de compra a partir del IDCompra IDProducto
-       IDSuper, cantidad y precio.
-
-    4. Eliminar una línea de compra a partir del IDCompra, IDProducto
-       e IDSuper.
-
-** Proceso: Gestión Productos
-*** Lista de operaciones
-    Explicar estas operaciones las realiza el sistema, porque se
-    puebla la base de datos, pero las operaciones existen.
-    1. Insertar un producto a partir del nombre, descripción y
-       calorías.
     2. Modificar un producto a partir del IDProducto, nombre,
        descripción y calorías.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_ope.png}
+         \caption{Esquema Operación - 02}
+         \label{fig:ope02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_nav.png}
+         \caption{Esquema Navegación - 02}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    3. Asociar un producto a un super a partir del IDProducto y el IDSuper.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/03_ope.png}
+         \caption{Esquema Operación - 03}
+         \label{fig:ope03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/03_nav.png}
+         \caption{Esquema Navegación - 03}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 ** Proceso: Gestión Supermercados
 *** Lista de operaciones
-    Explicar estas operaciones las realiza el sistema, porque se
-    puebla la base de datos, pero las operaciones existen.
     1. Insertar un supermercado a partir del nombre, dirección,
        teléfono y página web.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_ope.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_nav.png}
+         \caption{Esquema Navegación - 01}
+         \label{fig:nave01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       
     2. Modificar nombre, dirección, teléfono y página web de un
        supermercado a partir del IDSuper.
-
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_ope.png}
+         \caption{Esquema Operación - 02}
+         \label{fig:ope02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_nav.png}
+         \caption{Esquema Navegación - 02}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       
 ** Proceso: Gestión Recetas
 *** Lista de operaciones
     1. Insertar una receta a partir del nombre, personas, tiempo y
        descripción.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_ope.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_nav.png}
+         \caption{Esquema Navegación - 01}
+         \label{fig:nave01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     2. Modificar nombre, personas, tiempo y descripción de una receta
        a partir del IDReceta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_ope.png}
+         \caption{Esquema Operación - 02}
+         \label{fig:ope02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_nav.png}
+         \caption{Esquema Navegación - 02}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     3. Insertar una asociación de un producto a partir de su
        IDProducto y una receta a partir de su IDReceta con una
        cantidad.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/03_ope.png}
+         \caption{Esquema Operación - 03}
+         \label{fig:ope03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/03_nav.png}
+         \caption{Esquema Navegación - 03}
+         \label{fig:nave03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     4. Eliminar asociación de un producto a partir de su IDProducto de
        una receta identificada por IDReceta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/04_ope.png}
+         \caption{Esquema Operación - 04}
+         \label{fig:ope04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/04_nav.png}
+         \caption{Esquema Navegación - 04}
+         \label{fig:nave04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     5. Listar nombre, calorías, cantidad y descripción de los productos que
        componen una receta a partir de su IDReceta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/05_ope.png}
+         \caption{Esquema Operación - 05}
+         \label{fig:ope05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/05_nav.png}
+         \caption{Esquema Navegación - 05}
+         \label{fig:nave05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 ** Proceso: Gestión Dietas
 *** Lista de operaciones
-    1. Insertar una nueva dieta a partir del IDUsuario, nombre y
+    1. Insertar una nueva dieta a partir de su nombre y
        descripción.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_ope.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_nav.png}
+         \caption{Esquema Navegación - 01}
+         \label{fig:nave01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     2. Insertar una asociación de una receta a partir de su IDReceta a
        una dieta identificada por su IDDieta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_ope.png}
+         \caption{Esquema Operación - 02}
+         \label{fig:ope02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_nav.png}
+         \caption{Esquema Navegación - 02}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     3. Eliminar asociación de una receta a partir de su IDReceta de
        una dieta identificada por IDDieta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_ope.png}
+         \caption{Esquema Operación - 03}
+         \label{fig:ope03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_nav.png}
+         \caption{Esquema Navegación - 03}
+         \label{fig:nave03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     4. Listar nombre y descripción de las dietas de un usuario a
        partir de su IDUsuario.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/04_ope.png}
+         \caption{Esquema Operación - 04}
+         \label{fig:ope04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/04_nav.png}
+         \caption{Esquema Navegación - 04}
+         \label{fig:nave04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
     5. Listar nombre, personas, tiempo y descripción de cada una de
        las recetas asociadas a una dieta a partir de su IDDieta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/05_ope.png}
+         \caption{Esquema Operación - 05}
+         \label{fig:ope05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/05_nav.png}
+         \caption{Esquema Navegación - 05}
+         \label{fig:nave05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+	 
+    6. Insertar una asociacion entre una dieta por su IDDieta con un usuario por su IDUsuario.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/06_ope.png}
+         \caption{Esquema Operación - 06}
+         \label{fig:ope06}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/06_nav.png}
+         \caption{Esquema Navegación - 06}
+         \label{fig:nave06}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
 
 ** Proceso: Gestión Estadísticas
 *** Lista de operaciones
     1. Mostrar el gasto medio diario en las comidas realizadas por un
-       usuario a partir de su IDUsuario.
+       usuario a partir de su IDUsuario. Para ello divide el resultado de las siguientes operaciones:
+       1.1 Calcular el gasto total de todas las compras de un usuario dado por su IDUsuario.
+       1.2 Calcular el número de comidas llevadas a cabo por un usuario dado por su IDUsuario.
+
     2. Mostrar el gasto mensual actual de un usuario a partir de su
-       IDUsuario.
-       NOTA: Modificar RD y RF (queremos suma total de lo gastado en
-       comida desde principio de mes).
+       IDUsuario. Para ello divide el resultado de las siguientes operaciones:
+       2.1 Calcular el gastos desde principio de mes de un usuario dado por su IDUsuario.
+       2.2 Calcular el número de comidas realizadas por un usuario dado por su IDUSuario desde principio de mes.
+       NOTA: Modificar RD y RF
+
     3. Mostrar el nombre, calorías, descripción y cantidad de los
        productos existentes en el stock de un usuario a partir de su
-       IDUsuario.
+       IDUsuario. Para ello resta los resultados de las siguientes operaciones para cada IDProducto:
+       3.1 Calcular la cantidad total comprada de un producto dado su IDProducto  por un usuario dado su IDUsuario.
+       3.2 Calcular la cantidad total gastada en comidas de un producto a partir de su IDProducto, por un usuario a partir de su IDUSuario
+
     4. Mostar nombre, calorías y descripción de las recetas para las
        que dispone los ingredientes necesarios un usuario a partir de
-       su IDUsuario.
+       su IDUsuario. Para ello resta al resultado de la operación 3 (la anterior) el resultado de la operación 5 de gestión de recetas, que lista sus productos.
        NOTA: Haciendo uso del stock.
+
     5. Mostrar el nombre de los supermercados y precio total de lo que
        costaría comprar los ingredientes necesarios para elaborar las
-       recetas que componen una dieta a partir de su IDDieta.
+       recetas que componen una dieta a partir de su IDDieta. Para ello lista los productos de cada receta de la dieta (operaciones 5 de Recetas y Dietas respectivamente) y los múltiplica por el resultado de la siguiente función:
+       5.1 Listar el precio medio de un producto dado por IDProducto en los supermercados.
 
 ** Proceso: Gestión Comidas
 *** Lista de operaciones
-    1. Insertar el registro de una nueva comida por un usuario a
-       partir de su IDUsuario.
-       NOTA: se inserta campo fecha con valor: now().
+    1. Insertar una nueva comida.
+       NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_ope.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_nav.png}
+         \caption{Esquema Navegación - 01}
+         \label{fig:nave01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    2. Asociar una comida con un IDComida a un usuario con IDUsuario.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/02_ope.png}
+         \caption{Esquema Operación - 02}
+         \label{fig:ope02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/02_nav.png}
+         \caption{Esquema Navegación - 02}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    3. Asociar una comida con un IDComida a una receta con IDReceta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/03_ope.png}
+         \caption{Esquema Operación - 03}
+         \label{fig:ope03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/03_nav.png}
+         \caption{Esquema Navegación - 03}
+         \label{fig:nave03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    4. Eliminar una asociación entre una comida con un IDComida y una receta con IDReceta.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/04_ope.png}
+         \caption{Esquema Operación - 04}
+         \label{fig:ope04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/04_nav.png}
+         \caption{Esquema Navegación - 04}
+         \label{fig:nave04}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    5. Eliminar una asociación entre una comida a partir de su IDComida y un usuario a partir de su IDUsuario.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/05_ope.png}
+         \caption{Esquema Operación - 05}
+         \label{fig:ope05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/05_nav.png}
+         \caption{Esquema Navegación - 05}
+         \label{fig:nave05}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+    6. Eliminar una comida a partir de su IDComida.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/06_ope.png}
+         \caption{Esquema Operación - 06}
+         \label{fig:ope06}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/06_nav.png}
+         \caption{Esquema Navegación - 06}
+         \label{fig:nave06}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+	
 
 ** Proceso: Gestión Usuarios
 *** Lista de operaciones
    1. Insertar un usuario a partir de su nombre, apellido1, apellido2,
       username y password.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_ope.png}
+         \caption{Esquema Operación - 01}
+         \label{fig:ope01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_nav.png}
+         \caption{Esquema Navegación - 01}
+         \label{fig:nave01}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
    2. Eliminar un usuario a partir de su IDUsuario.
-      NOTA: Al loro hay que eliminar todo lo relacionado con ese usuario.
+      NOTA: Esta operación lanza las operaciones de borrado de comidas, compras y dietas.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_ope.png}
+         \caption{Esquema Operación - 02}
+         \label{fig:ope02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_nav.png}
+         \caption{Esquema Navegación - 02}
+         \label{fig:nave02}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
    3. Modificar el nombre, apellido1, apellido2, username y password
       de un usuario a partir de su IDUsuario.
+       - Esquema de operación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_ope.png}
+         \caption{Esquema Operación - 03}
+         \label{fig:ope03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+       - Esquema de navegación:
+         #+begin_LaTeX
+         \begin{figure}[!htp]
+         \centering
+         \includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_nav.png}
+         \caption{Esquema Navegación - 03}
+         \label{fig:nave03}
+         \medskip
+         \footnotesize
+         {}
+         \end{figure}
+       #+end_LaTeX
+
+
 * Interface
 
 * Manual de usuario
-
+  
 
 
 * LOS PRODUCTOS y SUPERMERCADOS SON POBLADOS POR EL SISTEMA.
