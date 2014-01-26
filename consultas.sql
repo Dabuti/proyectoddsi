@@ -24,10 +24,10 @@ Select IDDieta from Dieta where IDUsuario = entrada);
 
 --listar recetas
 Select Nombre, Personas, Tiempo, Descripcion
-from Receta; 
+from Receta;
 
 --listar comidas de un usuario
-select r.Nombre, r.Tiempo, r.Personas, r.Descripcion, c.Fecha 
+select r.Nombre, r.Tiempo, r.Personas, r.Descripcion, c.Fecha
 from Comida c, Receta r
 where c.IDUsuario = entrada and
 c.IDReceta = r.IDReceta
@@ -44,7 +44,7 @@ com.IDUsuario = entrada;
 --listar productos que componen  una receta
 Select p.Nombre, p.Descripcion, p.Calorias, rp.Cantidad
 from RecetaProducto rp, Producto p
-where rp.IDProducto = p.IDProducto and 
+where rp.IDProducto = p.IDProducto and
 rp.IDReceta = entradaReceta;
 
 --Calcular total gastado en todas las compras
@@ -64,7 +64,7 @@ c.IDProducto = entradaProducto; --DOS ENTRADAS
 --Calcular unidades gastadas de un producto por un usuario
 select sum(rp.Cantidad)
 from Comida c, RecetaProducto rp
-where rp.IDReceta = c.IDReceta and 
+where rp.IDReceta = c.IDReceta and
 rp.IDProducto = entradaProducto and
 c.IDUsuario = entrada;
 
@@ -75,3 +75,30 @@ where rp.IDReceta = entradaReceta and
 p.IDProducto = rp.IDProducto;
 
 --Mostrar el precio por super de lo que costaria llevar a cabo una dieta
+
+
+CREATE OR REPLACE FUNCTION ObtenerGastoTotal(iduser IN number)
+   RETURN number
+IS
+   output number;
+   cursor c1 is
+   SELECT sum(c.Precio)
+     FROM CompraProductoSuper c, Compra com
+     WHERE com.IDUsuario = iduser and
+      com.IDCompra = c.IDCompra;
+BEGIN
+   open c1;
+   fetch c1 into output;
+   close c1;
+RETURN output;
+END;
+
+
+CREATE OR REPLACE FUNCTION NumeroTotalComidas(iduser IN number)
+RETURN NUMBER IS output NUMBER;
+BEGIN
+ select count(*) INTO output
+ from Comida c
+ where c.IDUsuario = iduser;
+ return (output);
+END;

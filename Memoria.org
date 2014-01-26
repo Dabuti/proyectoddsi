@@ -560,7 +560,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-    
+
     4. Insertar una nueva línea de compra a partir del IDCompra, IDProducto
        IDSuper, cantidad y precio.
        - Esquema de operación:
@@ -724,7 +724,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-       
+
     2. Modificar nombre, dirección, teléfono y página web de un
        supermercado a partir del IDSuper.
        - Esquema de operación:
@@ -751,7 +751,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-       
+
 ** Proceso: Gestión Recetas
 *** Lista de operaciones
     1. Insertar una receta a partir del nombre, personas, tiempo y
@@ -1026,7 +1026,7 @@
          {}
          \end{figure}
        #+end_LaTeX
-	 
+
     6. Insertar una asociacion entre una dieta por su IDDieta con un usuario por su IDUsuario.
        - Esquema de operación:
          #+begin_LaTeX

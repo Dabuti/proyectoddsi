@@ -1,4 +1,4 @@
-% Created 2014-01-23 jue 05:13
+% Created 2014-01-25 sáb 22:25
 \documentclass[a4paper,12pt]{report}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -470,11 +470,11 @@ euros, tanto diario como mensual.
 \subsection{RD25-Datos nuevo usuario:}
 \label{sec-2-1-25}
 \begin{itemize}
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Primer apellido: una cadena de hasta 20 caracteres.
-\item Segundo apellido: una cadena de hasta 20 caracteres.
-\item Nombre de usuario: una cadena de hasta 20 caracteres.
-\item Contraseña: una cadena alfanumérica de hasta 20 elementos.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Primer apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Segundo apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Nombre de usuario}: una cadena de hasta 20 caracteres.
+\item \textbf{Contraseña}: una cadena alfanumérica de hasta 20 elementos.
 \end{itemize}
 \subsection{RD26-Datos usuario:}
 \label{sec-2-1-26}
@@ -659,12 +659,12 @@ euros, tanto diario como mensual.
 conjuntos de dos cifras y el tercero por un conjunto de cuatro
 cifras, separados por barras ('/').
 \end{itemize}
-\subsection{RD53-Datos comida a eliminar:}
+\subsection{RD53-Datos cojmida a eliminar:}
 \label{sec-2-1-53}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
-\item Identificador de receta: un número entero.
-\item Fecha: tres conjuntos de enteros formados los dos primeros por
+\item \textbf{Identificador de usuario}: un número entero.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Fecha}: tres conjuntos de enteros formados los dos primeros por
 conjuntos de dos cifras y el tercero por un conjunto de cuatro
 cifras, separados por barras ('/').
 \end{itemize}
@@ -703,17 +703,17 @@ cifras, separados por barras ('/').
 \label{sec-6-4}
 \chapter{Esquemas de Operación y Navegación}
 \label{sec-7}
-\section{Proceso: Gestión Usuarios}
+\section{Proceso: Gestión Compras}
 \label{sec-7-1}
 \subsection{Lista de operaciones:}
 \label{sec-7-1-1}
 \begin{enumerate}
-\item Listar los productos comprados por un usuario
+\item Listar el nombre, las calorías, la descripción, la cantidad, el precio de los productos, el nombre del supermercado y la fecha de las compras realizadas por un usuario a partir de su IDUsuario.
 \begin{itemize}
 \item Esquema de operación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/ope01.png}
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
@@ -723,33 +723,728 @@ cifras, separados por barras ('/').
 \item Esquema de navegación:
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.9\linewidth]{./operaciones/img/nave01.png}
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/01_nav.png}
+\caption{Esquema Navegación - 01}
+\label{fig:nave01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Insertar una nueva compra.
+NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_ope.png}
+\caption{Esquema Operación - 02}
+\label{fig:ope02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/02_nav.png}
+\caption{Esquema Navegación - 02}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Asociar una comprar a partir del IDUsuario del usuario y el IDCompra de la compra.
+\begin{itemize}
+\item Esquema de operación:
+\end{itemize}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/03_ope.png}
+\caption{Esquema Operación - 03}
+\label{fig:ope03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\begin{itemize}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/03_nav.png}
+\caption{Esquema Navegación - 03}
+\label{fig:nave03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Insertar una nueva línea de compra a partir del IDCompra, IDProducto
+IDSuper, cantidad y precio.
+\begin{itemize}
+\item Esquema de operación:
+\end{itemize}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/04_ope.png}
+\caption{Esquema Operación - 04}
+\label{fig:ope04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\begin{itemize}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/04_nav.png}
+\caption{Esquema Navegación - 04}
+\label{fig:nave04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Eliminar una línea de compra a partir del IDCompra, IDProducto e IDSuper.
+\begin{itemize}
+\item Esquema de operación:
+\end{itemize}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/05_ope.png}
+\caption{Esquema Operación - 05}
+\label{fig:ope05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\begin{itemize}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Compras/05_nav.png}
+\caption{Esquema Navegación - 05}
+\label{fig:nave05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+\end{enumerate}
+\section{Proceso: Gestión Productos}
+\label{sec-7-2}
+\subsection{Lista de operaciones}
+\label{sec-7-2-1}
+\begin{enumerate}
+\item Insertar un producto a partir del nombre, descripción y
+calorías.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_ope.png}
 \caption{Esquema Operación - 01}
 \label{fig:ope01}
 \medskip
 \footnotesize
 {}
 \end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/01_nav.png}
+\caption{Esquema Navegación - 01}
+\label{fig:nave01}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \end{itemize}
-\item Modificar un nuevo usuario a partir de su nombre, apellido1,
-apellido2, username y password.
+
+\item Modificar un producto a partir del IDProducto, nombre,
+descripción y calorías.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_ope.png}
+\caption{Esquema Operación - 02}
+\label{fig:ope02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/02_nav.png}
+\caption{Esquema Navegación - 02}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Asociar un producto a un super a partir del IDProducto y el IDSuper.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/03_ope.png}
+\caption{Esquema Operación - 03}
+\label{fig:ope03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Productos/03_nav.png}
+\caption{Esquema Navegación - 03}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+\end{enumerate}
+\section{Proceso: Gestión Supermercados}
+\label{sec-7-3}
+\subsection{Lista de operaciones}
+\label{sec-7-3-1}
+\begin{enumerate}
+\item Insertar un supermercado a partir del nombre, dirección,
+teléfono y página web.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_ope.png}
+\caption{Esquema Operación - 01}
+\label{fig:ope01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/01_nav.png}
+\caption{Esquema Navegación - 01}
+\label{fig:nave01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Modificar nombre, dirección, teléfono y página web de un
+supermercado a partir del IDSuper.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_ope.png}
+\caption{Esquema Operación - 02}
+\label{fig:ope02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Super/02_nav.png}
+\caption{Esquema Navegación - 02}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+\end{enumerate}
+\section{Proceso: Gestión Recetas}
+\label{sec-7-4}
+\subsection{Lista de operaciones}
+\label{sec-7-4-1}
+\begin{enumerate}
+\item Insertar una receta a partir del nombre, personas, tiempo y
+descripción.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_ope.png}
+\caption{Esquema Operación - 01}
+\label{fig:ope01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/01_nav.png}
+\caption{Esquema Navegación - 01}
+\label{fig:nave01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Modificar nombre, personas, tiempo y descripción de una receta
+a partir del IDReceta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_ope.png}
+\caption{Esquema Operación - 02}
+\label{fig:ope02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/02_nav.png}
+\caption{Esquema Navegación - 02}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Insertar una asociación de un producto a partir de su
+IDProducto y una receta a partir de su IDReceta con una
+cantidad.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/03_ope.png}
+\caption{Esquema Operación - 03}
+\label{fig:ope03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/03_nav.png}
+\caption{Esquema Navegación - 03}
+\label{fig:nave03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Eliminar asociación de un producto a partir de su IDProducto de
+una receta identificada por IDReceta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/04_ope.png}
+\caption{Esquema Operación - 04}
+\label{fig:ope04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/04_nav.png}
+\caption{Esquema Navegación - 04}
+\label{fig:nave04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Listar nombre, calorías, cantidad y descripción de los productos que
+componen una receta a partir de su IDReceta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/05_ope.png}
+\caption{Esquema Operación - 05}
+\label{fig:ope05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Recetas/05_nav.png}
+\caption{Esquema Navegación - 05}
+\label{fig:nave05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+\end{enumerate}
+\section{Proceso: Gestión Dietas}
+\label{sec-7-5}
+\subsection{Lista de operaciones}
+\label{sec-7-5-1}
+\begin{enumerate}
+\item Insertar una nueva dieta a partir de su nombre y
+descripción.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_ope.png}
+\caption{Esquema Operación - 01}
+\label{fig:ope01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/01_nav.png}
+\caption{Esquema Navegación - 01}
+\label{fig:nave01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Insertar una asociación de una receta a partir de su IDReceta a
+una dieta identificada por su IDDieta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_ope.png}
+\caption{Esquema Operación - 02}
+\label{fig:ope02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/02_nav.png}
+\caption{Esquema Navegación - 02}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Eliminar asociación de una receta a partir de su IDReceta de
+una dieta identificada por IDDieta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_ope.png}
+\caption{Esquema Operación - 03}
+\label{fig:ope03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/03_nav.png}
+\caption{Esquema Navegación - 03}
+\label{fig:nave03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Listar nombre y descripción de las dietas de un usuario a
+partir de su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/04_ope.png}
+\caption{Esquema Operación - 04}
+\label{fig:ope04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/04_nav.png}
+\caption{Esquema Navegación - 04}
+\label{fig:nave04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Listar nombre, personas, tiempo y descripción de cada una de
+las recetas asociadas a una dieta a partir de su IDDieta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/05_ope.png}
+\caption{Esquema Operación - 05}
+\label{fig:ope05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/05_nav.png}
+\caption{Esquema Navegación - 05}
+\label{fig:nave05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Insertar una asociacion entre una dieta por su IDDieta con un usuario por su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/06_ope.png}
+\caption{Esquema Operación - 06}
+\label{fig:ope06}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Dietas/06_nav.png}
+\caption{Esquema Navegación - 06}
+\label{fig:nave06}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+\end{enumerate}
+\section{Proceso: Gestión Estadísticas}
+\label{sec-7-6}
+\subsection{Lista de operaciones}
+\label{sec-7-6-1}
+\begin{enumerate}
+\item Mostrar el gasto medio diario en las comidas realizadas por un
+usuario a partir de su IDUsuario.
+\item Mostrar el gasto mensual actual de un usuario a partir de su
+IDUsuario.
+NOTA: Modificar RD y RF (queremos suma total de lo gastado en
+comida desde principio de mes).
+\item Mostrar el nombre, calorías, descripción y cantidad de los
+productos existentes en el stock de un usuario a partir de su
+IDUsuario.
+\item Mostar nombre, calorías y descripción de las recetas para las
+que dispone los ingredientes necesarios un usuario a partir de
+su IDUsuario.
+NOTA: Haciendo uso del stock.
+\item Mostrar el nombre de los supermercados y precio total de lo que
+costaría comprar los ingredientes necesarios para elaborar las
+recetas que componen una dieta a partir de su IDDieta.
+\end{enumerate}
+\section{Proceso: Gestión Comidas}
+\label{sec-7-7}
+\subsection{Lista de operaciones}
+\label{sec-7-7-1}
+\begin{enumerate}
+\item Insertar una nueva comida.
+NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_ope.png}
+\caption{Esquema Operación - 01}
+\label{fig:ope01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/01_nav.png}
+\caption{Esquema Navegación - 01}
+\label{fig:nave01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Asociar una comida con un IDComida a un usuario con IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/02_ope.png}
+\caption{Esquema Operación - 02}
+\label{fig:ope02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/02_nav.png}
+\caption{Esquema Navegación - 02}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Asociar una comida con un IDComida a una receta con IDReceta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/03_ope.png}
+\caption{Esquema Operación - 03}
+\label{fig:ope03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/03_nav.png}
+\caption{Esquema Navegación - 03}
+\label{fig:nave03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+\end{enumerate}
+\section{Proceso: Gestión Usuarios}
+\label{sec-7-8}
+\subsection{Lista de operaciones}
+\label{sec-7-8-1}
+\begin{enumerate}
+\item Insertar un usuario a partir de su nombre, apellido1, apellido2,
+username y password.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_ope.png}
+\caption{Esquema Operación - 01}
+\label{fig:ope01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/01_nav.png}
+\caption{Esquema Navegación - 01}
+\label{fig:nave01}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Eliminar un usuario a partir de su IDUsuario.
+NOTA: Esta operación lanza las operaciones de borrado de comidas, compras y dietas.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_ope.png}
+\caption{Esquema Operación - 02}
+\label{fig:ope02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/02_nav.png}
+\caption{Esquema Navegación - 02}
+\label{fig:nave02}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Modificar el nombre, apellido1, apellido2, username y password
+de un usuario a partir de su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_ope.png}
+\caption{Esquema Operación - 03}
+\label{fig:ope03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Usuarios/03_nav.png}
+\caption{Esquema Navegación - 03}
+\label{fig:nave03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
 \end{enumerate}
 
-\section{Proceso: \ldots{}}
-\label{sec-7-2}
-\subsection{Lista de operaciones:}
-\label{sec-7-2-1}
-Descripción\ldots{}
-\begin{itemize}
-\item Esquema operación:
-includegraphics
-\item Esquema navegación:
-includegraphics
-\end{itemize}
 \chapter{Interface}
 \label{sec-8}
 
 \chapter{Manual de usuario}
 \label{sec-9}
+
+
+
+\chapter{LOS PRODUCTOS y SUPERMERCADOS SON POBLADOS POR EL SISTEMA.}
+\label{sec-10}
 % Emacs 24.3.1 (Org mode 8.2.4)
 \end{document}

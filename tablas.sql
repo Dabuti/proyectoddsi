@@ -1,3 +1,32 @@
+drop table compraproductosuper;
+drop table dietausuario;
+drop table compra;
+drop table productosuper;
+drop table super;
+drop table recetaproducto;
+drop table dietareceta;
+drop table comida;
+drop table dieta;
+drop table receta;
+drop table producto;
+drop table usuario;
+drop trigger usuario_id;
+drop trigger compra_id;
+drop trigger super_id;
+drop trigger producto_id;
+drop trigger dieta_id;
+drop trigger comida_id;
+drop trigger receta_id;
+drop trigger compra_id;
+drop sequence usuario_seq;
+drop sequence compra_seq;
+drop sequence super_seq;
+drop sequence producto_seq;
+drop sequence dieta_seq;
+drop sequence comida_seq;
+drop sequence receta_seq;
+drop sequence compra_seq;
+
 CREATE TABLE Usuario(
        IDUsuario int NOT NULL,
        Nombre char(20) NOT NULL,
@@ -8,12 +37,24 @@ CREATE TABLE Usuario(
        PRIMARY KEY(IDUsuario)
 );
 
+CREATE SEQUENCE usuario_seq;
+
+CREATE OR REPLACE TRIGGER usuario_id
+BEFORE INSERT ON usuario
+FOR EACH ROW
+BEGIN
+  SELECT usuario_seq.NEXTVAL
+  INTO   :new.idusuario
+  FROM   dual;
+END;
+/
+
 CREATE TABLE Compra(
        IDCompra NUMBER(10) NOT NULL,
        Fecha DATE DEFAULT (sysdate),
        IDUsuario NUMBER(10) NOT NULL,
        PRIMARY KEY(IDCompra),
-       FOREIGN KEY(IDUsuario) REFERENCES Usuario(IDUsuario)
+       FOREIGN KEY(IDUsuario) REFERENCES Usuario(IDUsuario) on delete cascade
 );
 
 CREATE SEQUENCE compra_seq;
@@ -29,13 +70,14 @@ END;
 /
 
 CREATE TABLE Receta(
-       IDReceta int NOT NULL IDENTITY,
-       Nombre char(20) NOT NULL,
-       Personas smallint NOT NULL,
-       Tiempo smallint NOT NULL,
+       IDReceta NUMBER(10) NOT NULL,
+       Nombre char(100) NOT NULL,
+       Personas NUMBER(10) NOT NULL,
+       Tiempo NUMBER(10) NOT NULL,
        Descripcion char(200),  --NOT NULL??
        PRIMARY KEY(IDReceta)
 );
+
 CREATE SEQUENCE receta_seq;
 
 CREATE OR REPLACE TRIGGER receta_id
@@ -54,8 +96,8 @@ CREATE TABLE Comida(
        IDUsuario NUMBER(10) NOT NULL,
        IDReceta NUMBER(10) NOT NULL,
        PRIMARY KEY(IDComida),
-       FOREIGN KEY(IDUsuario) REFERENCES Usuario(IDUsuario),
-       FOREIGN KEY(IDReceta) REFERENCES Receta(IDReceta)
+       FOREIGN KEY(IDUsuario) REFERENCES Usuario(IDUsuario) on delete cascade,
+       FOREIGN KEY(IDReceta) REFERENCES Receta(IDReceta) on delete cascade
 );
 
 CREATE SEQUENCE comida_seq;
@@ -71,12 +113,12 @@ END;
 /
 
 CREATE TABLE Dieta(
-       IDDieta NUMBER(10) NOT NULL IDENTITY,
+       IDDieta NUMBER(10) NOT NULL,
        Nombre char(20) NOT NULL,
        Descripcion char(200),
        IDUsuario NUMBER(10) NOT NULL,
        PRIMARY KEY(IDDieta),
-       FOREIGN KEY(IDUsuario) REFERENCES Usuario(IDUsuario)
+       FOREIGN KEY(IDUsuario) REFERENCES Usuario(IDUsuario) on delete cascade
 );
 
 CREATE SEQUENCE dieta_seq;
@@ -136,8 +178,8 @@ CREATE TABLE ProductoSuper(
        IDProducto NUMBER(10) NOT NULL,
        IDSuper NUMBER(10) NOT NULL,
        PRIMARY KEY(IDProducto, IDSuper),
-       FOREIGN KEY(IDProducto) REFERENCES Producto(IDProducto),
-       FOREIGN KEY(IDSuper) REFERENCES Super(IDSuper)
+       FOREIGN KEY(IDProducto) REFERENCES Producto(IDProducto) on delete cascade,
+       FOREIGN KEY(IDSuper) REFERENCES Super(IDSuper) on delete cascade
 );
 
 CREATE TABLE CompraProductoSuper(
@@ -145,18 +187,26 @@ CREATE TABLE CompraProductoSuper(
        IDProducto NUMBER(10) NOT NULL,
        IDSuper NUMBER(10) NOT NULL,
        Cantidad NUMBER(10) NOT NULL,
-       Precio NUMBER(10) NOT NULL,
+       Precio NUMBER(10,2) NOT NULL,
        PRIMARY KEY(IDCompra, IDProducto, IDSuper),
-       FOREIGN KEY(IDCompra) REFERENCES Compra(IDCompra),
-       FOREIGN KEY(IDProducto, IDSuper) REFERENCES ProductoSuper(IDProducto, IDSuper)
+       FOREIGN KEY(IDCompra) REFERENCES Compra(IDCompra) on delete cascade,
+       FOREIGN KEY(IDProducto, IDSuper) REFERENCES ProductoSuper(IDProducto, IDSuper) on delete cascade
 );
 
 CREATE TABLE DietaReceta(
        IDDieta NUMBER(10) NOT NULL,
        IDReceta NUMBER(10) NOT NULL,
        PRIMARY KEY(IDDieta, IDReceta),
-       FOREIGN KEY(IDDieta) REFERENCES Dieta(IDDieta),
-       FOREIGN KEY(IDReceta) REFERENCES Receta(IDReceta)
+       FOREIGN KEY(IDDieta) REFERENCES Dieta(IDDieta) on delete cascade,
+       FOREIGN KEY(IDReceta) REFERENCES Receta(IDReceta) on delete cascade
+);
+
+CREATE TABLE DietaUsuario(
+       IDDieta NUMBER(10) NOT NULL,
+       IDUsuario NUMBER(10) NOT NULL,
+       PRIMARY KEY(IDDieta, IDUsuario),
+       FOREIGN KEY(IDDieta) REFERENCES Dieta(IDDieta) on delete cascade,
+       FOREIGN KEY(IDUsuario) REFERENCES Usuario(IDUsuario) on delete cascade
 );
 
 CREATE TABLE RecetaProducto(
@@ -164,8 +214,9 @@ CREATE TABLE RecetaProducto(
        IDProducto NUMBER(10) NOT NULL,
        Cantidad NUMBER(10) NOT NULL,
        PRIMARY KEY(IDReceta, IDProducto),
-       FOREIGN KEY(IDReceta) REFERENCES Receta(IDReceta),
-       FOREIGN KEY(IDProducto) REFERENCES Producto(IDProducto)
+       FOREIGN KEY(IDReceta) REFERENCES Receta(IDReceta) on delete cascade,
+       FOREIGN KEY(IDProducto) REFERENCES Producto(IDProducto) on delete cascade
 );
+
 
 COMMIT;
