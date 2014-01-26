@@ -1,4 +1,4 @@
---NUMERO DE COMIDAS
+--NÚMERO DE COMIDAS PREPARADAS POR UN USUARIO
 CREATE OR REPLACE FUNCTION NumeroTotalCompras(iduser IN number)
 RETURN NUMBER IS output NUMBER;
 BEGIN
@@ -8,7 +8,7 @@ BEGIN
 	return (output);
 END;
 
---TOTAL GASTADO
+--TOTAL GASTADO POR UN USUARIO
 CREATE OR REPLACE FUNCTION ObtenerGastoTotal(iduser IN number)
   RETURN number
 IS
@@ -25,4 +25,7 @@ BEGIN
 RETURN output;
 END;
 
-
+--TOTAL GASTADO
+SELECT trunc(sysdate, 'mm') primer_dia_del_mes,
+trunc(last_day(sysdate)) ultimo_dia_del_mes 
+FROM dual; 
