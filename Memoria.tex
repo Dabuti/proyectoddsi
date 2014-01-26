@@ -1,4 +1,4 @@
-% Created 2014-01-25 sáb 22:25
+% Created 2014-01-26 dom 13:51
 \documentclass[a4paper,12pt]{report}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -194,6 +194,8 @@ productos adquiridos:
 \item \textbf{fecha}: cuando se realizó la adquisición.
 \end{itemize}
 
+$\backslash$\newpage
+
 \section{Registro de dietas}
 \label{sec-1-2}
 Con todos los ingredientes adquirdos se pueden cocinar recetas. Las
@@ -246,9 +248,11 @@ Los usuarios podrán ver los platos que han realizado y se les
 ofrecerá la opción de eliminar una comida registrada, para subsanar
 posibles errores de registro.
 
+$\backslash$\newpage
+
 \section{Registro de usuarios}
 \label{sec-1-3}
-La base de usuarios estarán registrados, permitiendoles realizar
+La base de usuarios estarán registrados, permitiéndoles realizar
 dietas específicas, comidas, compras o recetas. Sus datos serían:
 \begin{itemize}
 \item \textbf{nombre}: una serie de caracteres.
@@ -282,12 +286,12 @@ los distintos supermercados, para ejecutar todos los platos de
 dicha dieta.
 
 Por último, el usuario deberá poder obtener su gasto medio en
-euros, tanto diario como mensual.
+euros, tanto el diario como desde el inicio del presente mes.
 \chapter{Análisis de requisitos}
 \label{sec-2}
 \section{Requisitos de datos}
 \label{sec-2-1}
-\subsection{RD-1: Datos nuevo producto}
+\subsection{RD1-Datos nuevo producto}
 \label{sec-2-1-1}
 \begin{itemize}
 \item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
@@ -355,7 +359,6 @@ euros, tanto diario como mensual.
 \begin{itemize}
 \item \textbf{Identificador} de usuario: un número entero.
 \end{itemize}
-
 \subsection{RD10-Datos compra:}
 \label{sec-2-1-10}
 \begin{itemize}
@@ -455,17 +458,17 @@ euros, tanto diario como mensual.
 \subsection{RD23-Datos producto de receta a eliminar:}
 \label{sec-2-1-23}
 \begin{itemize}
-\item Identificador de producto: un número entero.
-\item Identificador de receta: un número entero.
+\item \textbf{Identificador de producto}: un número entero.
+\item \textbf{Identificador de receta}: un número entero.
 \end{itemize}
 \subsection{RD24-Datos receta modificada:}
 \label{sec-2-1-24}
 \begin{itemize}
-\item Identificador de receta: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres.
-\item Personas: un número entero.
-\item Tiempo: un número entero.
-\item Descripción: una cadena de hasta 200 caracteres.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres.
+\item \textbf{Personas}: un número entero.
+\item \textbf{Tiempo}: un número entero.
+\item \textbf{Descripción}: una cadena de hasta 200 caracteres.
 \end{itemize}
 \subsection{RD25-Datos nuevo usuario:}
 \label{sec-2-1-25}
@@ -479,187 +482,186 @@ euros, tanto diario como mensual.
 \subsection{RD26-Datos usuario:}
 \label{sec-2-1-26}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Primer apellido: una cadena de hasta 20 caracteres.
-\item Segundo apellido: una cadena de hasta 20 caracteres.
-\item Nombre de usuario: una cadena de hasta 20 caracteres.
-\item Contraseña: una cadena alfanumérica de hasta 20 elementos.
+\item \textbf{Identificador de usuario}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Primer apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Segundo apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Nombre de usuario}: una cadena de hasta 20 caracteres.
+\item \textbf{Contraseña}: una cadena alfanumérica de hasta 20 elementos.
 \end{itemize}
 \subsection{RD27-Datos usuario modificado:}
 \label{sec-2-1-27}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Primer apellido: una cadena de hasta 20 caracteres.
-\item Segundo apellido: una cadena de hasta 20 caracteres.
-\item Contraseña: una cadena alfanumérica de hasta 20 elementos.
+\item \textbf{Identificador de usuario}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Primer apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Segundo apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Contraseña}: una cadena alfanumérica de hasta 20 elementos.
 \end{itemize}
 
 \subsection{RD28-Datos usuario a eliminar:}
 \label{sec-2-1-28}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD29-Datos nueva comida:}
 \label{sec-2-1-29}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
-\item Identificador de receta: un número entero.
-\item Fecha: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el                 tercero por un conjunto de cuatro cifras, separados por barras ('/').
+\item \textbf{Identificador de usuario}: un número entero.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Fecha}: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el                 tercero por un conjunto de cuatro cifras, separados por barras ('/').
 \end{itemize}
 \subsection{RD30-Datos comida:}
 \label{sec-2-1-30}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
-\item Identificador de receta: un número entero.
-\item Fecha: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el                 tercero por un conjunto de cuatro cifras, separados por barras ('/').
+\item \textbf{Identificador de usuario}: un número entero.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Fecha}: tres conjuntos de enteros formados los dos primeros por conjuntos de dos cifras y el                 tercero por un conjunto de cuatro cifras, separados por barras ('/').
 \end{itemize}
 \subsection{RD31-Identificador propietario de stock:}
 \label{sec-2-1-31}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD32-Lista de stock:}
 \label{sec-2-1-32}
 \begin{itemize}
-\item Identificador de producto: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Calorías: un número decimal positivo.
-\item Descripción: una cadena de hasta 200 caracteres.
-\item Cantidad: un número entero mayor que cero.
+\item \textbf{Identificador de producto}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Calorías}: un número decimal positivo.
+\item \textbf{Descripción}: una cadena de hasta 200 caracteres.
+\item \textbf{Cantidad}: un número entero mayor que cero.
 \end{itemize}
 \subsection{RD33-Identificador usuario para gasto diario:}
 \label{sec-2-1-33}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD34-Valor de gasto diario:}
 \label{sec-2-1-34}
 \begin{itemize}
-\item Gasto: un número decimal.
+\item \textbf{Gasto}: un número decimal.
 \end{itemize}
 \subsection{RD35-Identificador usuario para gasto mensual:}
 \label{sec-2-1-35}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD36-Valor de gasto mensual:}
 \label{sec-2-1-36}
 \begin{itemize}
-\item Gasto: un número decimal.
+\item \textbf{Gasto}: un número decimal.
 \end{itemize}
 \subsection{RD37-Usuario que consulta recetas disponibles:}
 \label{sec-2-1-37}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD38-Lista recetas disponibles:}
 \label{sec-2-1-38}
 \begin{itemize}
-\item Identificador de receta: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Personas: un número entero mayor que cero.
-\item Tiempo: un número entero mayor que cero.
-\item Descripción: una cadena de hasta 200 caracteres.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Personas}: un número entero mayor que cero.
+\item \textbf{Tiempo}: un número entero mayor que cero.
+\item \textbf{Descripción}: una cadena de hasta 200 caracteres.
 \end{itemize}
 \subsection{RD39-Identificador de dieta a consultar:}
 \label{sec-2-1-39}
 \begin{itemize}
-\item Identificador de dieta: un número entero.
+\item \textbf{Identificador de dieta}: un número entero.
 \end{itemize}
 \subsection{RD40-Coste por super:}
 \label{sec-2-1-40}
 \begin{itemize}
-\item Identificador de super: un número entero.
-\item Nombre:  una cadena de hasta 20 caracteres no vacía.
-\item Dirección:  una cadena de hasta 30 caracteres.
-\item Teléfono: una cadena de hasta 9 caracteres numéricos.
-\item Página web: una cadena de hasta 20 caracteres.
-\item Gasto: un número decimal.
+\item \textbf{Identificador de super}: un número entero.
+\item \textbf{Nombre}:  una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Dirección}:  una cadena de hasta 30 caracteres.
+\item \textbf{Teléfono}: una cadena de hasta 9 caracteres numéricos.
+\item \textbf{Página web}: una cadena de hasta 20 caracteres.
+\item \textbf{Gasto}: un número decimal.
 \end{itemize}
 \subsection{RD41-Datos de identificación:}
 \label{sec-2-1-41}
 \begin{itemize}
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Contraseña: una cadena alfanumérica de hasta 20 elementos no vacía.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Contraseña}: una cadena alfanumérica de hasta 20 elementos no vacía.
 \end{itemize}
-\subsection{RD42-Identificador creador de dieta completa:}
+\subsection{RD42-Identificador creador de dieta:}
 \label{sec-2-1-42}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
-\subsection{RD43-Datos dieta completa:}
+\subsection{RD43-Identificador usuario:}
 \label{sec-2-1-43}
 \begin{itemize}
-\item Identificador de dieta: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Descripción: una cadena de hasta 200 caracteres.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
+
 \subsection{RD44-Lista de recetas de dieta:}
 \label{sec-2-1-44}
 \begin{itemize}
-\item Identificador de receta: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres.
-\item Personas: un número entero.
-\item Tiempo: un número entero.
-\item Descripción: una cadena de hasta 200 caracteres.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres.
+\item \textbf{Personas}: un número entero.
+\item \textbf{Tiempo}: un número entero.
+\item \textbf{Descripción}: una cadena de hasta 200 caracteres.
 \end{itemize}
 \subsection{RD45-Identificador creador de dietas:}
 \label{sec-2-1-45}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD46-Lista de dietas:}
 \label{sec-2-1-46}
 \begin{itemize}
-\item Identificador de dieta: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres no vacía.
-\item Descripción: una cadena de hasta 200 caracteres.
+\item \textbf{Identificador de dieta}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres no vacía.
+\item \textbf{Descripción}: una cadena de hasta 200 caracteres.
 \end{itemize}
 \subsection{RD47-Identificador consultor de recetas:}
 \label{sec-2-1-47}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD48-Lista de recetas:}
 \label{sec-2-1-48}
 \begin{itemize}
-\item Identificador de receta: un número entero.
-\item Nombre: una cadena de hasta 20 caracteres.
-\item Personas: un número entero.
-\item Tiempo: un número entero.
-\item Descripción: una cadena de hasta 200 caracteres.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres.
+\item \textbf{Personas}: un número entero.
+\item \textbf{Tiempo}: un número entero.
+\item \textbf{Descripción}: una cadena de hasta 200 caracteres.
 \end{itemize}
 \subsection{RD49-Identificador usuario propio:}
 \label{sec-2-1-49}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD50-Datos usuario propio:}
 \label{sec-2-1-50}
 \begin{itemize}
-\item Nombre: una cadena de hasta 20 caracteres.
-\item Primer apellido: una cadena de hasta 20 caracteres.
-\item Segundo apellido: una cadena de hasta 20 caracteres.
-\item Nombre de usuario: una cadena de hasta 20 caracteres.
-\item Contraseña: una cadena alfanumérica de hasta 20 elementos.
+\item \textbf{Nombre}: una cadena de hasta 20 caracteres.
+\item \textbf{Primer apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Segundo apellido}: una cadena de hasta 20 caracteres.
+\item \textbf{Nombre de usuario}: una cadena de hasta 20 caracteres.
+\item \textbf{Contraseña}: una cadena alfanumérica de hasta 20 elementos.
 \end{itemize}
 \subsection{RD51-Identificador cocinero:}
 \label{sec-2-1-51}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
+\item \textbf{Identificador de usuario}: un número entero.
 \end{itemize}
 \subsection{RD52-Lista de comidas:}
 \label{sec-2-1-52}
 \begin{itemize}
-\item Identificador de usuario: un número entero.
-\item Identificador de receta: un número entero.
-\item Fecha: tres conjuntos de enteros formados los dos primeros por
+\item \textbf{Identificador de usuario}: un número entero.
+\item \textbf{Identificador de receta}: un número entero.
+\item \textbf{Fecha}: tres conjuntos de enteros formados los dos primeros por
 conjuntos de dos cifras y el tercero por un conjunto de cuatro
 cifras, separados por barras ('/').
 \end{itemize}
-\subsection{RD53-Datos cojmida a eliminar:}
+\subsection{RD53-Datos comida a eliminar:}
 \label{sec-2-1-53}
 \begin{itemize}
 \item \textbf{Identificador de usuario}: un número entero.
@@ -668,39 +670,266 @@ cifras, separados por barras ('/').
 conjuntos de dos cifras y el tercero por un conjunto de cuatro
 cifras, separados por barras ('/').
 \end{itemize}
-
 \section{Requisitos funcionales}
 \label{sec-2-2}
+\subsection{\textbf{RF1-Alta de un producto}: registra un producto en el sistema a partir de los datos de un producto proporcionados por un usuario.}
+\label{sec-2-2-1}
+
+\subsection{\textbf{RF2-Modificar un producto}: modifica los datos de un producto almacenado en el sistema por los proporcionados por el usuario.}
+\label{sec-2-2-2}
+
+\subsection{\textbf{RF3-Listar productos comprados}: devuelve los productos comprados por el usuario cuyo código se ha pasado como parámetro.}
+\label{sec-2-2-3}
+
+\subsection{\textbf{RF4-Registrar un super}: añade un nuevo supermercado al sistema con la información facilitada por el usuario.}
+\label{sec-2-2-4}
+
+\subsection{\textbf{RF5-Modificar un super}: altera la información de un supermercado registrado en el sistema por los nuevos datos suministrados.}
+\label{sec-2-2-5}
+
+\subsection{\textbf{RF6-Nueva compra}: almacena una compra nueva en el sistema con la fecha actual y el identificador del usuario que la ha iniciado.}
+\label{sec-2-2-6}
+
+\subsection{\textbf{RF7-Añadir producto a compra}: incluye una cantidad determinada de artículos identificados por los datos proporcionados por el usuario y su importe en euros.}
+\label{sec-2-2-7}
+
+\subsection{\textbf{RF8-Eliminar producto de compra}: borra de una compra el producto adquirido en un supermercado  por el usuario.}
+\label{sec-2-2-8}
+
+\subsection{\textbf{RF9-Añadir nueva dieta}: agrega una nueva dieta a las almacenadas en el sistema a partir de los datos dados por el usuario.}
+\label{sec-2-2-9}
+
+\subsection{\textbf{RF10-Añadir receta a dieta}: incluye una receta en una dieta, ambas identificadas por los datos proporcionador por el usuario.}
+\label{sec-2-2-10}
+
+\subsection{\textbf{RF11-Eliminar receta de dieta}: borra una receta de una dieta determinada, según los datos proporcionados por el usuario.}
+\label{sec-2-2-11}
+
+\subsection{\textbf{RF12-Añadir nueva receta}: registra una receta en el sistema partiendo de los datos de una receta proporcionados por un usuario.}
+\label{sec-2-2-12}
+
+\subsection{\textbf{RF13-Añadir producto a receta}: registra un ingrediente, junto con su cantidad, en una receta almacenada en el sistema, a partir de los datos introducidos por el usuario.}
+\label{sec-2-2-13}
+
+\subsection{\textbf{RF14-Eliminar producto de receta}: elimina el producto identificado por el usuario de la receta proporcionada por el mismo.}
+\label{sec-2-2-14}
+
+\subsection{\textbf{RF15-Modificar una receta}: altera la información de una receta registrada en el sistema por los nuevos datos que el usuario proporcione.}
+\label{sec-2-2-15}
+
+\subsection{\textbf{RF16-Dar de alta un usuario}: registra un usuario nuevo en el sistema a partir de la información proporcionada por un usuario anónimo.}
+\label{sec-2-2-16}
+
+\subsection{\textbf{RF17-Modificar un usuario}: modifica los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.}
+\label{sec-2-2-17}
+
+\subsection{\textbf{RF18-Elimina un usuario}: suprime los datos de un usuario registrado en el sistema e identificado por los nuevos valores suministrados.}
+\label{sec-2-2-18}
+
+\subsection{\textbf{RF19-Hacer comida}: registra la elaboración de una receta llevada a cabo por un usuario del sistema en la fecha actual.}
+\label{sec-2-2-19}
+
+\subsection{\textbf{RF20-Listar stock}: muestra la cantidad de productos disponibles para un usuario.}
+\label{sec-2-2-20}
+
+\subsection{\textbf{RF21-Calcular gasto diario}: devuelve el promedio de euros que gasta el usuario cada día en comidas.}
+\label{sec-2-2-21}
+
+\subsection{\textbf{RF22-Calcular gasto mensual}: retorna la cantidad de euros que el usuario ha gastado este mes entre las comidas realizadas.}
+\label{sec-2-2-22}
+
+\subsection{\textbf{RF23-Mostrar recetas disponibles}: devuelve una lista con todas las recetas que, según los ingredientes disponibles y las dietas que sigue, se pueden cocinar.}
+\label{sec-2-2-23}
+
+\subsection{\textbf{RF24-Calcular precio de una dieta}: devuelve el coste de llevar a cabo cada receta de una dieta para cada supermercado.}
+\label{sec-2-2-24}
+
+\subsection{\textbf{RF25-Identificar usuario}: comprueba si los datos proporcionados por el usuarios anónimo coinciden con los de algún usuario registrado en el sistema y devuelve su clave.}
+\label{sec-2-2-25}
+
+\subsection{\textbf{RF26-Listar dieta completa}: muestra toda la información de las recetas asociadas a una dieta.}
+\label{sec-2-2-26}
+
+\subsection{\textbf{RF27-Listar dietas}: recoge del sistema todas las dietas asociadas al usuario y los devuelve en una lista.}
+\label{sec-2-2-27}
+
+\subsection{\textbf{RF28-Listar recetas}: devuelve una lista con todas las recetas del sistema, tanto las que pertenecen a alguna de nuestras dietas como las que no.}
+\label{sec-2-2-28}
+
+\subsection{\textbf{RF29-Mostrar datos usuario}: muestra los campos registrados asociados al identificador de usuario.}
+\label{sec-2-2-29}
+
+\subsection{\textbf{RF30-Listar comidas}: lista todos los platos que ha llevado a cabo el usuario del sistema.}
+\label{sec-2-2-30}
+
+\subsection{\textbf{RF31-Eliminar comida}: borra una comida registrada a partir de la receta y el identificador de usuario registrado.}
+\label{sec-2-2-31}
+
+\subsection{\textbf{Validación cruzada de requisitos}}
+\label{sec-2-2-32}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/tablaRF1.png}
+\caption{Requisitos funcionales}
+\label{fig:Requisitos funcionales}
+\medskip
+\footnotesize
+{}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/tablaRF2.png}
+\caption{Requisitos funcionales}
+\label{fig:Requisitos funcionales}
+\medskip
+\footnotesize
+{}
+\end{figure}
+
 \section{Restricciones semánticas}
 \label{sec-2-3}
+\subsection{RS1-No se pueden registrar usuarios con username repetidos.}
+\label{sec-2-3-1}
+\subsection{RS2-Todas las dietas deben estar asociadas a un usuario registrado.}
+\label{sec-2-3-2}
 \chapter{Esquema caja negra}
 \label{sec-3}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/cajanegra.png}
+\caption{Caja Negra}
+\label{fig:Caja Negra}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \chapter{Refinamiento 0}
 \label{sec-4}
 \section{DFD 0 (Esquema Armazón)}
 \label{sec-4-1}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/dfd0.png}
+\caption{Esquema armazón}
+\label{fig:Esquema armazón}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \section{Esquema externo 0}
 \label{sec-4-2}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/externo0.png}
+\caption{Externo 0}
+\label{fig:Externo 0}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \section{Entidad Relación 0}
 \label{sec-4-3}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.6\linewidth]{./refinamientos/er0.png}
+\caption{Entidad relación 0}
+\label{fig:Entidad relación 0}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \chapter{Refinamiento 1}
 \label{sec-5}
 \section{DFD 1}
 \label{sec-5-1}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/dfd1.png}
+\caption{Diagrama de flujo de datos 1}
+\label{fig:Diagrama de flujo de datos 1}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \section{Esquema externo 1}
 \label{sec-5-2}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/externo1.png}
+\caption{Externo 1}
+\label{fig:Externo 1}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \section{Entidad Relación 1}
 \label{sec-5-3}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.7\linewidth]{./refinamientos/er1.png}
+\caption{Entidad relación 1}
+\label{fig:Entidad relación 1}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \chapter{Refinamiento 2}
 \label{sec-6}
 \section{DFD 2 (Esquema Armazón)}
 \label{sec-6-1}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.95\linewidth]{./refinamientos/dfd2.png}
+\caption{Diagrama de flujo de datos 2}
+\label{fig:Diagrama de flujo de datos 2}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \section{Esquema externo 2}
 \label{sec-6-2}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/externo21.png}
+\caption{Externo 2.1}
+\label{fig:Externo 2.1}
+\medskip
+\footnotesize
+{}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/externo22.png}
+\caption{Externo 2.2}
+\label{fig:Externo 2.2}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \section{Entidad Relación 2}
 \label{sec-6-3}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.8\linewidth]{./refinamientos/er2.png}
+\caption{Entidad relación 2}
+\label{fig:Entidad relación 2}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \section{Entidad Relación final (atributos)}
 \label{sec-6-4}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./refinamientos/erfinal.png}
+\caption{Entidad relación final}
+\label{fig:Entidad relación final}
+\medskip
+\footnotesize
+{}
+\end{figure}
 \chapter{Esquemas de Operación y Navegación}
 \label{sec-7}
 \section{Proceso: Gestión Compras}
@@ -1261,21 +1490,183 @@ las recetas asociadas a una dieta a partir de su IDDieta.
 \label{sec-7-6-1}
 \begin{enumerate}
 \item Mostrar el gasto medio diario en las comidas realizadas por un
-usuario a partir de su IDUsuario.
+usuario a partir de su IDUsuario. Para ello divide el resultado de las siguientes operaciones:
+1.1 Calcular el gasto total de todas las compras de un usuario dado por su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/11_ope.png}
+\caption{Esquema Operación - 1.1}
+\label{fig:ope11}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/11_nav.png}
+\caption{Esquema Navegación - 1.1}
+\label{fig:nave11}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+1.2 Calcular el número de comidas llevadas a cabo por un usuario dado por su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/12_ope.png}
+\caption{Esquema Operación - 1.2}
+\label{fig:ope12}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/12_nav.png}
+\caption{Esquema Navegación - 1.2}
+\label{fig:nave12}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
 \item Mostrar el gasto mensual actual de un usuario a partir de su
-IDUsuario.
-NOTA: Modificar RD y RF (queremos suma total de lo gastado en
-comida desde principio de mes).
+IDUsuario. Para ello divide el resultado de las siguientes operaciones:
+2.1 Calcular el gastos desde principio de mes de un usuario dado por su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/21_ope.png}
+\caption{Esquema Operación - 2.1}
+\label{fig:ope21}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/21_nav.png}
+\caption{Esquema Navegación - 2.1}
+\label{fig:nave21}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+2.2 Calcular el número de comidas realizadas por un usuario dado por su IDUSuario desde principio de mes.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/22_ope.png}
+\caption{Esquema Operación - 2.2}
+\label{fig:ope22}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/22_nav.png}
+\caption{Esquema Navegación - 2.2}
+\label{fig:nave22}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
 \item Mostrar el nombre, calorías, descripción y cantidad de los
 productos existentes en el stock de un usuario a partir de su
-IDUsuario.
+IDUsuario. Para ello resta los resultados de las siguientes operaciones para cada IDProducto:
+3.1 Calcular la cantidad total comprada de un producto dado su IDProducto por un usuario dado su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/31_ope.png}
+\caption{Esquema Operación - 3.1}
+\label{fig:ope31}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/31_nav.png}
+\caption{Esquema Navegación - 3.1}
+\label{fig:nave31}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+3.2 Calcular la cantidad total gastada en comidas de un producto a partir de su IDProducto, por un usuario a partir de su IDUSuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/32_ope.png}
+\caption{Esquema Operación - 3.2}
+\label{fig:ope32}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/32_nav.png}
+\caption{Esquema Navegación - 3.2}
+\label{fig:nave32}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
 \item Mostar nombre, calorías y descripción de las recetas para las
 que dispone los ingredientes necesarios un usuario a partir de
-su IDUsuario.
-NOTA: Haciendo uso del stock.
+su IDUsuario. Para ello resta al resultado de la operación 3 (la anterior) el resultado de la operación 5 de gestión de recetas, que lista sus productos.
+
 \item Mostrar el nombre de los supermercados y precio total de lo que
 costaría comprar los ingredientes necesarios para elaborar las
-recetas que componen una dieta a partir de su IDDieta.
+recetas que componen una dieta a partir de su IDDieta. Para ello lista los productos de cada receta de la dieta (operaciones 5 de Recetas y Dietas respectivamente) y los múltiplica por el resultado de la siguiente función:
+5.1 Listar el IDProducto, el nombre del producto, el nombre del super y el precio medio de comprar ese producto en ese super (media de todos los precios/cantidad) para un usuario a partir de su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/51_ope.png}
+\caption{Esquema Operación - 5.1}
+\label{fig:ope51}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/51_nav.png}
+\caption{Esquema Navegación - 5.1}
+\label{fig:nave51}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
 \end{enumerate}
 \section{Proceso: Gestión Comidas}
 \label{sec-7-7}
@@ -1349,6 +1740,78 @@ NOTA: se inserta como Fecha un valor igual a la fecha actual de sistema.
 \includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/03_nav.png}
 \caption{Esquema Navegación - 03}
 \label{fig:nave03}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Eliminar una asociación entre una comida con un IDComida y una receta con IDReceta.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/04_ope.png}
+\caption{Esquema Operación - 04}
+\label{fig:ope04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/04_nav.png}
+\caption{Esquema Navegación - 04}
+\label{fig:nave04}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Eliminar una asociación entre una comida a partir de su IDComida y un usuario a partir de su IDUsuario.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/05_ope.png}
+\caption{Esquema Operación - 05}
+\label{fig:ope05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.9\linewidth]{./operaciones/img/Comidas/05_nav.png}
+\caption{Esquema Navegación - 05}
+\label{fig:nave05}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\end{itemize}
+
+\item Eliminar una comida a partir de su IDComida.
+\begin{itemize}
+\item Esquema de operación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/06_ope.png}
+\caption{Esquema Operación - 06}
+\label{fig:ope06}
+\medskip
+\footnotesize
+{}
+\end{figure}
+\item Esquema de navegación:
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\linewidth]{./operaciones/img/Comidas/06_nav.png}
+\caption{Esquema Navegación - 06}
+\label{fig:nave06}
 \medskip
 \footnotesize
 {}
