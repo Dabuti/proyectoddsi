@@ -523,7 +523,7 @@
     Devuelve el promedio de euros que gasta el usuario cada día en comidas.
 
 *** *RF22-Calcular gasto mensual*
-    Retorna la cantidad de euros que el usuario ha gastado este mes entre las comidas realizadas.
+    Retorna la cantidad de euros que el usuario ha gastado en compras desde el principio de este mes.
 
 *** *RF23-Mostrar recetas disponibles*
     Devuelve una lista con todas las recetas que, según los ingredientes disponibles y las dietas que sigue, se pueden cocinar.
@@ -1372,16 +1372,15 @@
          \end{figure}
        #+end_LaTeX
 
-    2. Mostrar el gasto mensual actual de un usuario a partir de su
-       IDUsuario. Para ello divide el resultado de las siguientes operaciones:
-       2.1 Calcular el gastos desde principio de mes de un usuario dado por su IDUsuario.
+    2. Mostrar el gasto en compras desde el principio de mes de un usuario a partir de su
+       IDUsuario.
        - Esquema de operación:
          #+begin_LaTeX
          \begin{figure}[!htp]
          \centering
          \includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/21_ope.png}
-         \caption{Esquema Operación - 2.1}
-         \label{fig:ope21}
+         \caption{Esquema Operación - 2}
+         \label{fig:ope2}
          \medskip
          \footnotesize
          {}
@@ -1392,34 +1391,8 @@
          \begin{figure}[!htp]
          \centering
          \includegraphics[width=0.9\linewidth]{./operaciones/img/Estadisticas/21_nav.png}
-         \caption{Esquema Navegación - 2.1}
-         \label{fig:nave21}
-         \medskip
-         \footnotesize
-         {}
-         \end{figure}
-       #+end_LaTeX
-
-       2.2 Calcular el número de comidas realizadas por un usuario dado por su IDUSuario desde principio de mes.
-       - Esquema de operación:
-         #+begin_LaTeX
-         \begin{figure}[!htp]
-         \centering
-         \includegraphics[width=0.7\linewidth]{./operaciones/img/Estadisticas/22_ope.png}
-         \caption{Esquema Operación - 2.2}
-         \label{fig:ope22}
-         \medskip
-         \footnotesize
-         {}
-         \end{figure}
-       #+end_LaTeX
-       - Esquema de navegación:
-         #+begin_LaTeX
-         \begin{figure}[!htp]
-         \centering
-         \includegraphics[width=0.7\linewidth]{./operaciones/img/Estadisticas/22_nav.png}
-         \caption{Esquema Navegación - 2.2}
-         \label{fig:nave22}
+         \caption{Esquema Navegación - 2}
+         \label{fig:nave2}
          \medskip
          \footnotesize
          {}
