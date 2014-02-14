@@ -1,32 +1,32 @@
---Listar productos
+-- Listar productos
 Select Nombre, Descripcion, Calorias
 from Producto;
 
---listar supers
+-- listar supers
 Select Nombre, Direccion, Telefono, Web
 from Super;
 
---listar tus datos
+-- listar tus datos
 Select Nombre, Apellido1, Apellido2, Username, Password
 from Usuario
 where IDUsuario = entrada;
 
---listar tus dietas
+-- listar tus dietas
 Select Nombre, Descripcion
 from Dieta
 Where IDUsuario = entrada;
 
---listar recetas de una de tus dietas
+-- listar recetas de una de tus dietas
 Select r.Nombre, r.Personas, r.Tiempo, r.Descripcion
 from Receta r, Dieta d
 where d.IDDieta IN (
 Select IDDieta from Dieta where IDUsuario = entrada);
 
---listar recetas
+-- listar recetas
 Select Nombre, Personas, Tiempo, Descripcion
 from Receta;
 
---listar comidas de un usuario
+-- listar comidas de un usuario
 select r.Nombre, r.Tiempo, r.Personas, r.Descripcion, c.Fecha
 from Comida c, Receta r
 where c.IDUsuario = entrada and
@@ -61,17 +61,57 @@ where com.IDCompra = c.IDCompra and
 com.IDUsuario = entrada and
 c.IDProducto = entradaProducto; --DOS ENTRADAS
 
---Calcular unidades gastadas de un producto por un usuario
+-- Calcular unidades gastadas de un producto por un usuario
 select sum(rp.Cantidad)
 from Comida c, RecetaProducto rp
 where rp.IDReceta = c.IDReceta and
 rp.IDProducto = entradaProducto and
 c.IDUsuario = entrada;
 
---Calcular calorias de una receta
+-- Calcular calorias de una receta
 Select sum(p.Calorias*rp.Cantidad)
 from RecetaProducto rp, Producto p
 where rp.IDReceta = entradaReceta and
 p.IDProducto = rp.IDProducto;
 
---Mostrar el precio por super de lo que costaria llevar a cabo una dieta
+-- Mostrar el precio por super de lo que costaria llevar a cabo una dieta
+
+
+
+-- Recetas que se pueden elaborar con el stock disponible
+select
+   idreceta
+from
+   receta r
+where
+   not exists
+      (select
+         *
+       from
+         recetaproducto rp
+       where
+         r.idreceta = rp.idreceta
+       and
+         not exists
+           (select
+              *
+            from
+              view1 v
+            where
+              v.idproducto = rp.idproducto
+            and
+              v.disponible >= rp.cantidad
+           and v.idusuario ='21'));
+
+
+-- Gasto mensual
+select
+  sum(cps.precio) total
+from
+  compra c, compraproductosuper cps
+where
+  c.IDUsuario='2'
+and
+  to_char(fecha, 'mm-yyyy') = to_char(sysdate, 'mm-yyyy')
+and
+  cps.IDCompra = c.IDCompra;

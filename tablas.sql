@@ -212,12 +212,53 @@ CREATE TABLE DietaUsuario(
 CREATE TABLE RecetaProducto(
        IDReceta NUMBER(10) NOT NULL,
        IDProducto NUMBER(10) NOT NULL,
-       Cantidad NUMBER(10) NOT NULL,
+       Cantidad NUMBER(10,2) NOT NULL,
        PRIMARY KEY(IDReceta, IDProducto),
        FOREIGN KEY(IDReceta) REFERENCES Receta(IDReceta) on delete cascade,
        FOREIGN KEY(IDProducto) REFERENCES Producto(IDProducto) on delete cascade
 );
 
+
+
+-- Vistas
+CREATE OR REPLACE VIEW view1 AS
+select
+   c1.idusuario,
+   c1.idproducto,
+   c1.nombre,
+   c1.cantidad comprado,
+   NVL(c2.cantidad,0) gastado,
+   NVL(c1.cantidad - c2.cantidad, c1.cantidad) disponible
+from
+    (select
+      c.idusuario,
+      p.idproducto,
+      p.nombre,
+      sum(cantidad) cantidad
+    from
+      compraproductosuper cps,
+      compra c,
+      producto p
+    where
+      c.idcompra = cps.idcompra
+    and
+      p.idproducto = cps.idproducto
+    group by
+      c.idusuario, p.idproducto, p.nombre) c1
+LEFT OUTER JOIN
+    (select
+       cm.idusuario,
+       rp.idproducto,
+       sum(rp.cantidad) cantidad
+    from
+       recetaproducto rp, comida cm
+    where
+       cm.idreceta=rp.idreceta
+    group by
+       cm.idusuario, rp.idproducto) c2
+ON
+    c1.idproducto = c2.idproducto
+and c1.idusuario = c2.idusuario;
 
 -- Procedimientos y funciones
 CREATE OR REPLACE FUNCTION ObtenerGastoTotal(iduser IN number)
@@ -247,4 +288,264 @@ BEGIN
 END;
 /
 
+CREATE OR REPLACE FUNCTION (iduser IN number)
+RETURN NUMBER IS output NUMBER;
+BEGIN
+ select count(*) INTO output
+ from Comida c
+ where c.IDUsuario = iduser;
+ return (output);
+END;
+/
+
+-- Consulta para obtener toda la cantidad comprada de cada articulo:
+select p.nombre, sum(cps.cantidad)
+    from compraproductosuper cps,
+       compra c, producto p
+    where
+       c.idcompra = cps.idcompra
+    and
+       c.idusuario = '2'
+    and
+       p.idproducto = cps.idproducto
+    group by
+       p.idproducto, p.nombre;
+
+-- Paquete Stock : Declaración
+CREATE OR REPLACE PACKAGE Stock AS
+   FUNCTION MostrarStock(iduser number) return SYS_REFCURSOR;
+END Stock;
+/
+-- Paquete Stock : Cuerpo
+CREATE OR REPLACE PACKAGE BODY Stock AS
+   FUNCTION MostrarStock(iduser IN number)
+   RETURN SYS_REFCURSOR IS
+     my_cursor SYS_REFCURSOR;
+   BEGIN
+     open my_cursor for
+       select
+         c1.idproducto,
+         c1.nombre,
+         c1.cantidad comprado,
+         NVL(c2.cantidad,0) gastado,
+         NVL(c1.cantidad - c2.cantidad, c1.cantidad) disponible
+       from
+         (select
+           p.idproducto,
+           p.nombre,
+           sum(cantidad) cantidad
+          from
+           compraproductosuper cps,
+           compra c,
+           producto p
+       where
+           c.idcompra = cps.idcompra
+       and
+           c.idusuario=iduser
+       and
+           p.idproducto = cps.idproducto
+       group by
+           p.idproducto, p.nombre) c1
+   LEFT OUTER JOIN
+    (select
+       rp.idproducto,
+       sum(rp.cantidad) cantidad
+    from
+       recetaproducto rp, comida cm
+    where
+       cm.idusuario=iduser
+    and
+       cm.idreceta=rp.idreceta
+    group by
+       rp.idproducto) c2
+    ON
+       c1.idproducto = c2.idproducto;
+  RETURN my_cursor;
+  END MostrarStock;
+END Stock;
+/
+
+
+-- Consulta que obtiene el stock
+select
+   c1.idproducto,
+   c1.nombre,
+   c1.cantidad comprado,
+   NVL(c2.cantidad,0) gastado,
+   NVL(c1.cantidad - c2.cantidad, c1.cantidad) disponible
+from
+    (select
+      p.idproducto,
+      p.nombre,
+      sum(cantidad) cantidad
+    from
+      compraproductosuper cps,
+      compra c,
+      producto p
+    where
+      c.idcompra = cps.idcompra
+    and
+      c.idusuario='2'
+    and
+      p.idproducto = cps.idproducto
+    group by
+      p.idproducto, p.nombre) c1
+LEFT OUTER JOIN
+    (select
+       rp.idproducto,
+       sum(rp.cantidad) cantidad
+    from
+       recetaproducto rp, comida cm
+    where
+       cm.idusuario='2'
+    and
+       cm.idreceta=rp.idreceta
+    group by
+       rp.idproducto) c2
+ON
+    c1.idproducto = c2.idproducto;
+
+
+
+
+
+
+
+select r.idreceta, r.nombre
+from receta r, recetaproducto rp,
+(select
+p.idproducto,
+sum(cantidad) cantidad
+from
+compraproductosuper cps,
+compra c,
+producto p
+where
+c.idcompra = cps.idcompra
+and
+c.idusuario='2'
+and
+p.idproducto = cps.idproducto
+group by
+p.idproducto) c1
+where
+r.idreceta = rp.idreceta and
+c1.idproducto = rp.idproducto and
+c1.cantidad >= rp.cantidad;
+
+
 COMMIT;
+
+
+
+
+
+select
+   r.idreceta,
+   r.nombre,
+   c1.nombre Producto,
+   c1.cantidad STOCK,
+   rp.cantidad INGREDIENTE
+from
+   receta r,
+   recetaproducto rp,
+   (select
+      p.idproducto,
+      sum(cantidad) cantidad,
+      p.nombre
+    from
+      compraproductosuper cps,
+      compra c,
+      producto p
+    where
+      c.idcompra = cps.idcompra
+    and
+      c.idusuario = '2'
+    and
+      p.idproducto = cps.idproducto
+    group by
+      p.idproducto) c1
+where
+   r.idreceta = rp.idreceta
+and
+   c1.idproducto = rp.idproducto
+and
+   c1.cantidad >= rp.cantidad;
+
+
+
+
+
+
+select
+   s.nombre,
+   sum(c1.preciomedio*rp.cantidad)
+from
+   super s,
+   dietareceta dr,
+   recetaproducto rp
+   (select
+       c.idproducto,
+       cps.idsuper,
+       avg(cps.precio)/avg(cps.cantidad) preciomedio
+    from
+       compra c,
+       compraproductosuper cps
+    where
+        c.idusuario = '2' and
+        c.idcompra = cps.idcompra
+    group by
+        c.idCompra) c1
+where
+   dr.idDieta = '1'
+and
+   dr.idreceta = rp.idreceta
+and
+   rp.idproducto = c1.idproducto
+and
+   c1.idsuper = s.idsuper;
+
+
+
+
+
+
+
+
+
+
+
+
+select
+   c1.idproducto
+from
+    (select
+      p.idproducto,
+      p.nombre,
+      sum(cantidad) cantidad
+    from
+      compraproductosuper cps,
+      compra c,
+      producto p
+    where
+      c.idcompra = cps.idcompra
+    and
+      c.idusuario='2'
+    and
+      p.idproducto = cps.idproducto
+    group by
+      p.idproducto, p.nombre) c1
+LEFT OUTER JOIN
+    (select
+       rp.idproducto,
+       sum(rp.cantidad) cantidad
+    from
+       recetaproducto rp, comida cm
+    where
+       cm.idusuario='2'
+    and
+       cm.idreceta=rp.idreceta
+    group by
+       rp.idproducto) c2
+ON
+    c1.idproducto = c2.idproducto;
